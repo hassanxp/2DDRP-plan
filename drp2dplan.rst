@@ -14,7 +14,7 @@ covering the period from October 2018 until the end of operations.
 Notes
 -----
 
-Each 2D-DRP release is named according to an incremental version number of the form <major>.<minor> . 
+Each 2D-DRP release is named according to an incremental version number of the form ``<major>.<minor>`` . 
 For historical reasons, the initial version described in this plan is 4.0 .
 
 
