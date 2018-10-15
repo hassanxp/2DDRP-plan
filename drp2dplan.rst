@@ -11,11 +11,22 @@ Aim
 This document describes the current working plan for DRP development, 
 covering the period from October 2018 until the end of operations.
 
+
+Data flow
+---------
+
+.. figure:: DRP-flow-20181015.jpg
+
+The data flow for 2D DRP processing is depicted in the figure above. Blue boxes indicate main processing units, and white boxes key input data types.
+The instrument and its corresponding simulator are shown in central green boxes. The outputs of the simulator and instrument are in general the same (as expected if the simulator simulates the instrument correctly), with the exception that the instrument will provide bias, darks and flats that can be later used by the simulator.
+
+
 Notes
 -----
 
 Each 2D-DRP release is named according to an incremental version number of the form <major>.<minor> . 
 For historical reasons, the initial version described in this plan is 4.0 .
+
 
 
 2DDRP-4.0 (Sep 2018)
