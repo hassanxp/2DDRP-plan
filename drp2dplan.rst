@@ -24,7 +24,7 @@ The instrument and its corresponding simulator are shown in central green boxes.
 Notes
 -----
 
-Each 2D-DRP release is named according to an incremental version number of the form <major>.<minor> . 
+Each 2D-DRP release is named according to an incremental version number of the form ``<major>.<minor>`` . 
 For historical reasons, the initial version described in this plan is 4.0 .
 
 
