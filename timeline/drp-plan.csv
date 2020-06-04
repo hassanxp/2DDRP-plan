@@ -1,0 +1,12 @@
+Task,Start,Finish,Complete,Category
+PIPE2D-523 (B/R/N merging), 2020-04-20, 2020-04-30, 0, Calibration
+PIPE2D-aaa(PSF modelling w Subaru data), 2020-04-30, 2020-04-30,0, 2dPsFModelling
+PIPE2D-502(Improved detectormap), 2020-04-01, 2020-04-20, 0, WavelengthCalibration
+PIPE2D-ccc(Odd-even fiber check), 2020-09-01, 2020-09-02, 0, Calibration
+SM1-AIT, 2019-12-01, 2020-04-14, 0, Activity
+SM2 delivery, 2020-06-01, 2020-06-03, 0, Milestone
+NCU2 installation, 2020-09-01, 2020-09-03, 0, Milestone
+PFI installation, 2020-09-01, 2020-09-03, 0, Milestone
+SM3 delivery, 2020-12-01, 2020-12-03, 0, Milestone
+SM4 delivery, 2021-06-01, 2021-06-03, 0, Milestone
+
