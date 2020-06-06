@@ -1,12 +1,17 @@
 Task,Start,Finish,Complete,Category
-PIPE2D-523 (B/R/N merging), 2020-04-20, 2020-04-30, 0, Calibration
-PIPE2D-aaa(PSF modelling w Subaru data), 2020-04-30, 2020-04-30,0, 2dPsFModelling
-PIPE2D-502(Improved detectormap), 2020-04-01, 2020-04-20, 0, WavelengthCalibration
-PIPE2D-ccc(Odd-even fiber check), 2020-09-01, 2020-09-02, 0, Calibration
-SM1-AIT, 2019-12-01, 2020-04-14, 0, Activity
-SM2 delivery, 2020-06-01, 2020-06-03, 0, Milestone
-NCU2 installation, 2020-09-01, 2020-09-03, 0, Milestone
-PFI installation, 2020-09-01, 2020-09-03, 0, Milestone
-SM3 delivery, 2020-12-01, 2020-12-03, 0, Milestone
-SM4 delivery, 2021-06-01, 2021-06-03, 0, Milestone
+PSF modelling w/Subaru, 2020-05-01, 2020-8-30,0, 2dPsFModelling
+Improved detectormap (< 5 km/s), 2020-06-01, 2020-12-01, 0, WavelengthCalibration
+Improved sky subtraction, 2021-02-01, 2020-05-01, 0, Calibration
+Improved detectormap (1 km/s), 2021-04-01, 2021-08-01, 0, WavelengthCalibration
+FRD modeling, 2019-09-01, 2021-06-01, 0, Calibration
+DCR, 2021-04-01, 2021-12-31, 0, Calibration
+SM1-AIT, 2019-12-01, 2020-06-02, 0, Activity
+SM2 delivery, 2020-06-01, 2020-07-01, 0, SMx-delivery
+NCU2 installation, 2020-09-01, 2020-10-01, 0, NIR
+PFI installation, 2020-12-01, 2021-01-01, 0, PFI
+SM3 delivery, 2020-12-01, 2021-01-01, 0, SMx-delivery
+SM4 delivery, 2021-06-01, 2021-07-01, 0, SMx-delivery
+Sky exposures, 2021-02-01, 2025-01-01, 0, Sky
+Commissioning, 2021-01-01, 2022-06-01, 0, Project
+Science Operations, 2022-06-01, 2025-01-01, 0, Project
 
