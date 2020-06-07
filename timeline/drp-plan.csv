@@ -1,17 +1,21 @@
 Task,Start,Finish,Complete,Category
+Science Operations, 2022-06-01, 2025-01-01, 0, Project
+Commissioning, 2021-01-01, 2022-06-01, 0, Project
+Sky exposures, 2021-02-01, 2025-01-01, 0, Sky
+SM1@Subaru, 2019-12-01, 2020-06-02, 0, Hardware
+SM2@LAM, 2020-05-01, 2020-12-31, 0, Hardware
+SM2@Subaru, 2020-12-01, 2025-01-01, 0, Hardware
+SM3(B+R)@LAM, 2020-10-01, 2021-06-01, 0, Hardware
+NIR@LAM, 2020-09-01, 2020-10-01, 0, Hardware
+SM3(B+R+N)@LAM, 2020-10-01, 2021-06-01, 0, Hardware
+SM3@Subaru, 2021-06-01, 2025-01-01, 0, Hardware
+SM4@LAM, 2021-06-01, 2021-12-01, 0, Hardware
+SM4@Subaru, 2021-12-01, 2022-06-01, 0, Hardware
+PFI@Subaru, 2020-12-01, 2025-01-01, 0, Hardware
 PSF modelling w/Subaru, 2020-05-01, 2020-8-30,0, 2dPsFModelling
 Improved detectormap (< 5 km/s), 2020-06-01, 2020-12-01, 0, WavelengthCalibration
-Improved sky subtraction, 2021-02-01, 2020-05-01, 0, Calibration
 Improved detectormap (1 km/s), 2021-04-01, 2021-08-01, 0, WavelengthCalibration
+Improved sky subtraction, 2021-02-01, 2020-05-01, 0, Calibration
 FRD modeling, 2019-09-01, 2021-06-01, 0, Calibration
 DCR, 2021-04-01, 2021-12-31, 0, Calibration
-SM1-AIT, 2019-12-01, 2020-06-02, 0, Activity
-SM2 delivery, 2020-06-01, 2020-07-01, 0, SMx-delivery
-NCU2 installation, 2020-09-01, 2020-10-01, 0, NIR
-PFI installation, 2020-12-01, 2021-01-01, 0, PFI
-SM3 delivery, 2020-12-01, 2021-01-01, 0, SMx-delivery
-SM4 delivery, 2021-06-01, 2021-07-01, 0, SMx-delivery
-Sky exposures, 2021-02-01, 2025-01-01, 0, Sky
-Commissioning, 2021-01-01, 2022-06-01, 0, Project
-Science Operations, 2022-06-01, 2025-01-01, 0, Project
 
