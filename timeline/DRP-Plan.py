@@ -15,7 +15,16 @@ import random
 random.seed(123)
 
 
-# In[3]:
+# In[12]:
+
+
+catColors = dict(Sky='rgb(220, 0, 0)', Project='rgb(220, 0, 0)', 
+                 Hardware='rgb(220, 0, 0)', Calibration='rgb(220, 0, 0)', 
+                 PsfModelling='rgb(220, 0, 0)', WavelengthCalibration='rgb(220, 0, 0)')
+catColors
+
+
+# In[11]:
 
 
 df = pd.read_csv('drp-plan.csv')

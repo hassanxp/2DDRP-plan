@@ -12,7 +12,7 @@ SM3@Subaru, 2021-06-01, 2025-01-01, 0, Hardware
 SM4@LAM, 2021-06-01, 2021-12-01, 0, Hardware
 SM4@Subaru, 2021-12-01, 2022-06-01, 0, Hardware
 PFI@Subaru, 2020-12-01, 2025-01-01, 0, Hardware
-PSF modelling w/Subaru, 2020-05-01, 2020-8-30,0, 2dPsFModelling
+PSF modelling w/Subaru, 2020-05-01, 2020-8-30,0, PsfModelling
 Improved detectormap (< 5 km/s), 2020-06-01, 2020-12-01, 0, WavelengthCalibration
 Improved detectormap (1 km/s), 2021-04-01, 2021-08-01, 0, WavelengthCalibration
 Improved sky subtraction, 2021-02-01, 2020-05-01, 0, Calibration
