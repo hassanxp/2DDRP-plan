@@ -1,7 +1,7 @@
 Task,Start,Finish,Complete,Category
 Science Operations, 2022-06-01, 2025-01-01, 0, Project
-Commissioning, 2021-01-01, 2022-06-01, 0, Project
-Sky exposures, 2021-02-01, 2025-01-01, 0, Sky
+Commissioning, 2021-02-01, 2022-06-01, 0, Project
+Sky exposures, 2021-01-01, 2025-01-01, 0, Project
 SM1@Subaru, 2019-12-01, 2020-06-02, 0, Hardware
 SM2@LAM, 2020-05-01, 2020-12-31, 0, Hardware
 SM2@Subaru, 2020-12-01, 2025-01-01, 0, Hardware
@@ -12,10 +12,16 @@ SM3@Subaru, 2021-06-01, 2025-01-01, 0, Hardware
 SM4@LAM, 2021-06-01, 2021-12-01, 0, Hardware
 SM4@Subaru, 2021-12-01, 2022-06-01, 0, Hardware
 PFI@Subaru, 2020-12-01, 2025-01-01, 0, Hardware
-PSF modelling w/Subaru, 2020-05-01, 2020-8-30,0, PsfModelling
+PSF modelling (B+R), 2020-05-01, 2020-8-30,0, PSF
+PSF modelling (N), 2020-10-01, 2021-01-30,0, PSF
+FRD modeling, 2019-09-01, 2021-06-01, 0, PSF
 Improved detectormap (< 5 km/s), 2020-06-01, 2020-12-01, 0, WavelengthCalibration
-Improved detectormap (1 km/s), 2021-04-01, 2021-08-01, 0, WavelengthCalibration
-Improved sky subtraction, 2021-02-01, 2020-05-01, 0, Calibration
-FRD modeling, 2019-09-01, 2021-06-01, 0, Calibration
+Improved detectormap (< 1 km/s), 2021-04-01, 2021-08-01, 0, WavelengthCalibration
+Telluric Correction, 2020-09-01, 2020-12-31, 0, Sky
+OH line modelling, 2020-09-01, 2021-04-01, 0, Sky
+Improved sky subtraction, 2021-02-01, 2020-05-01, 0, Sky
+H4RG modelling, 2020-08-01, 2021-05-01, 0, Calibration
+Flux Calibration, 2020-02-01, 2021-06-01, 0, Calibration
 DCR, 2021-04-01, 2021-12-31, 0, Calibration
+CCD Crosstalk, 2021-01-01, 2021-06-01, 0, Calibration
 
