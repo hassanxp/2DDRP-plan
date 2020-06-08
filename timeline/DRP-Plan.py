@@ -22,7 +22,7 @@ catColors = dict(Project='rgb(255, 51, 0)',
                  Infra='rgb(153, 0, 153)')
 
 
-# In[143]:
+# In[151]:
 
 
 df = pd.read_csv('drp-plan.csv').applymap(lambda x: x.strip() if type(x)==str else x)
