@@ -10,7 +10,7 @@ import random
 import plotly.graph_objects as go
 
 
-# In[24]:
+# In[140]:
 
 
 catColors = dict(Project='rgb(255, 51, 0)', 
@@ -18,50 +18,58 @@ catColors = dict(Project='rgb(255, 51, 0)',
                  Sky='rgb(51, 153, 255)', 
                  PSF='rgb(102, 0, 255)', 
                  WavelengthCalibration='rgb(153, 102, 255)', 
-                 Calibration='rgb(204, 51, 255)')
+                 Calibration='rgb(204, 51, 255)',
+                 Infra='rgb(153, 0, 153)')
 
 
-# In[88]:
+# In[143]:
 
 
 df = pd.read_csv('drp-plan.csv').applymap(lambda x: x.strip() if type(x)==str else x)
-
-
-# In[89]:
-
 
 for cat in set(df['Category']):
     if cat not in catColors:
         print(f'category {cat} is not in color mapping') 
 
-
-# In[90]:
-
-
 arms_full = df[df['Task'] == 'SM3(B+R+N)@LAM']['Start'].values[0]
 commissioning_start = df[df['Task'] == 'Commissioning']['Start'].values[0]
 commissioning_end = df[df['Task'] == 'Commissioning']['Finish'].values[0]
+ssp_end = df[df['Task'] == 'CfSSP']['Start'].values[0]
 
-
-# In[91]:
-
+#print(f'{arms_full} {commissioning_start} {commissioning_end} {ssp_end}')
 
 fig = ff.create_gantt(df, colors=catColors, index_col='Category',
-                      show_colorbar=True, bar_width=0.05, showgrid_x=True, showgrid_y=False, title="DRP Plan")
-fig.update_layout(plot_bgcolor='rgba(0,0,0, 0.02)')
+                      show_colorbar=False, 
+                      bar_width=0.1, 
+                      showgrid_x=True, 
+                      showgrid_y=False, 
+                      title="DRP Plan")
+fig.update_layout(plot_bgcolor='rgba(0,0,0, 0.1)')
 
-for yr in [arms_full, commissioning_start, commissioning_end]:
+for mls_yr, mls_text in {arms_full: 'R+B+N', 
+                 commissioning_start: 'Comm Start', 
+                 commissioning_end : 'Comm End', 
+                 ssp_end : 'CfSSP'}.items():
     fig.add_trace(
         go.Scatter(
-            x = [yr, yr],
+            x = [mls_yr, mls_yr],
             y = [-1, len(df.index) + 1],
-            mode = "lines",
+#            mode = "lines",
+            mode = "lines+text",
+            name = mls_text,
+            textposition = "bottom center",
             line = go.scatter.Line(color = "gray", width = 1),
             showlegend = False
         )
     )
 
 fig.show()
+
+
+# In[ ]:
+
+
+
 
 
 # In[ ]:
