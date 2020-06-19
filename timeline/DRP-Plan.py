@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[23]:
+# In[1]:
 
 
 import plotly.figure_factory as ff
@@ -10,7 +10,7 @@ import random
 import plotly.graph_objects as go
 
 
-# In[140]:
+# In[2]:
 
 
 catColors = dict(Project='rgb(255, 51, 0)', 
@@ -22,7 +22,7 @@ catColors = dict(Project='rgb(255, 51, 0)',
                  Infra='rgb(153, 0, 153)')
 
 
-# In[151]:
+# In[3]:
 
 
 df = pd.read_csv('drp-plan.csv').applymap(lambda x: x.strip() if type(x)==str else x)
