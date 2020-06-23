@@ -25,7 +25,7 @@ Initial sky subtraction, 2019-09-01, 2019-12-31, 0, Sky
 Telluric Correction, 2020-09-01, 2020-12-31, 0, Sky
 OH line modelling, 2020-09-01, 2021-04-01, 0, Sky
 Improved sky subtraction, 2021-02-01, 2021-09-01, 0, Sky
-H4RG modelling, 2020-08-01, 2021-05-01, 0, Calibration
+H4RG modelling, 2020-08-01, 2021-08-01, 0, Calibration
 Flux Calibration, 2020-02-01, 2021-06-01, 0, Calibration
 CCD Crosstalk, 2021-01-01, 2021-06-01, 0, Calibration
 DCR, 2021-04-01, 2021-12-31, 0, Calibration
