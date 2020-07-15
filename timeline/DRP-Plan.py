@@ -22,7 +22,7 @@ catColors = dict(Project='rgb(255, 51, 0)',
                  Infra='rgb(153, 0, 153)')
 
 
-# In[17]:
+# In[22]:
 
 
 df = pd.read_csv('drp-plan.csv').applymap(lambda x: x.strip() if type(x)==str else x).iloc[::-1]
@@ -32,8 +32,8 @@ for cat in set(df['Category']):
         print(f'category {cat} is not in color mapping') 
 
 arms_full = df[df['Task'] == 'SM3(B+R+N)@LAM']['Start'].values[0]
-commissioning_start = df[df['Task'] == 'Commissioning']['Start'].values[0]
-commissioning_end = df[df['Task'] == 'Commissioning']['Finish'].values[0]
+engobs_start = df[df['Task'] == 'Start of engineering observations']['Start'].values[0]
+science_ops = df[df['Task'] ==  'Science Operations']['Start'].values[0]
 ssp_end = df[df['Task'] == 'Call for SSP']['Start'].values[0]
 
 #print(f'{arms_full} {commissioning_start} {commissioning_end} {ssp_end}')
@@ -47,8 +47,8 @@ fig = ff.create_gantt(df, colors=catColors, index_col='Category',
 fig.update_layout(plot_bgcolor='rgba(0,0,0, 0.1)')
 
 for mls_yr, mls_text in {arms_full: 'R+B+N', 
-                 commissioning_start: 'Comm Start', 
-                 commissioning_end : 'Comm End', 
+                 engobs_start: 'Eng Obs Start', 
+                 engobs_end : 'Eng Obs End', 
                  ssp_end : 'Call for SSP'}.items():
     fig.add_trace(
         go.Scatter(
