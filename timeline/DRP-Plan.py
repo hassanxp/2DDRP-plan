@@ -22,7 +22,7 @@ catColors = dict(Project='rgb(255, 51, 0)',
                  Infra='rgb(153, 0, 153)')
 
 
-# In[3]:
+# In[6]:
 
 
 df = pd.read_csv('drp-plan.csv').applymap(lambda x: x.strip() if type(x)==str else x)
@@ -34,7 +34,7 @@ for cat in set(df['Category']):
 arms_full = df[df['Task'] == 'SM3(B+R+N)@LAM']['Start'].values[0]
 commissioning_start = df[df['Task'] == 'Commissioning']['Start'].values[0]
 commissioning_end = df[df['Task'] == 'Commissioning']['Finish'].values[0]
-ssp_end = df[df['Task'] == 'CfSSP']['Start'].values[0]
+ssp_end = df[df['Task'] == 'Call for SSP']['Start'].values[0]
 
 #print(f'{arms_full} {commissioning_start} {commissioning_end} {ssp_end}')
 
@@ -49,7 +49,7 @@ fig.update_layout(plot_bgcolor='rgba(0,0,0, 0.1)')
 for mls_yr, mls_text in {arms_full: 'R+B+N', 
                  commissioning_start: 'Comm Start', 
                  commissioning_end : 'Comm End', 
-                 ssp_end : 'CfSSP'}.items():
+                 ssp_end : 'Call for SSP'}.items():
     fig.add_trace(
         go.Scatter(
             x = [mls_yr, mls_yr],

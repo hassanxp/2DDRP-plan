@@ -1,8 +1,9 @@
 Task,Start,Finish,Complete,Category
 Science Operations, 2023-02-01, 2025-01-01, 0, Project
 Commissioning, 2021-06-01, 2023-01-30, 0, Project
-CfSSP, 2022-04-01, 2022-05-01, 0, Project
-SSP Readiness Review, 2022-04-01, 2022-10-01, 0, Project
+Call for SSP, 2022-04-01, 2022-05-01, 0, Project
+End of SSP Proposal Review, 2022-10-01, 2022-10-01, 0, Project
+Readiness review of inst for science, 2022-08-01, 2022-09-01, 0, Project
 Sky exposures, 2022-02-01, 2025-01-01, 0, Project
 SM1(B+R)@Subaru, 2019-12-01, 2020-06-02, 0, Hardware
 SM2(B+R)@LAM, 2020-05-01, 2020-12-31, 0, Hardware
@@ -14,11 +15,11 @@ SM3(B+R+N)@Subaru, 2021-06-01, 2025-01-01, 0, Hardware
 SM4(B+R)@LAM, 2021-06-01, 2021-11-01, 0, Hardware
 SM4(B+R)@Subaru, 2021-11-01, 2021-12-01, 0, Hardware
 PFI@Subaru, 2020-12-01, 2025-01-01, 0, Hardware
-PSF modelling (B+R), 2020-05-01, 2020-8-30,0, PSF
-Arc line intensity modelling, 2019-06-1, 2020-08-01, 0, PSF
-Arc subtraction, 2020-09-01, 2020-10-01, 0, PSF
+PSF modelling (B+R), 2020-05-01, 2020-08-30,0, PSF
 PSF modelling (N), 2020-10-01, 2021-01-30,0, PSF
 FRD modeling, 2019-09-01, 2021-06-01, 0, PSF
+Arc line intensity modelling, 2019-06-1, 2020-08-01, 0, PSF
+Arc subtraction, 2020-09-01, 2020-10-01, 0, PSF
 Improved wavelength soln (< 5 km/s), 2020-06-01, 2020-12-01, 0, WavelengthCalibration
 Improved wavelength soln (< 1 km/s), 2021-04-01, 2021-08-01, 0, WavelengthCalibration
 Initial sky subtraction, 2019-09-01, 2019-12-31, 0, Sky
