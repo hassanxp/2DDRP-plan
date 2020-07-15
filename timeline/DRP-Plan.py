@@ -10,7 +10,7 @@ import random
 import plotly.graph_objects as go
 
 
-# In[2]:
+# In[8]:
 
 
 catColors = dict(Project='rgb(255, 51, 0)', 
@@ -22,10 +22,10 @@ catColors = dict(Project='rgb(255, 51, 0)',
                  Infra='rgb(153, 0, 153)')
 
 
-# In[6]:
+# In[17]:
 
 
-df = pd.read_csv('drp-plan.csv').applymap(lambda x: x.strip() if type(x)==str else x)
+df = pd.read_csv('drp-plan.csv').applymap(lambda x: x.strip() if type(x)==str else x).iloc[::-1]
 
 for cat in set(df['Category']):
     if cat not in catColors:
