@@ -22,9 +22,11 @@ catColors = dict(Project='rgb(255, 51, 0)',
                  Infra='rgb(153, 0, 153)')
 
 
-# In[22]:
+# In[35]:
 
 
+# Load in CSV
+# Last row is usually plotted first, so reverse that.
 df = pd.read_csv('drp-plan.csv').applymap(lambda x: x.strip() if type(x)==str else x).iloc[::-1]
 
 for cat in set(df['Category']):
@@ -36,14 +38,13 @@ engobs_start = df[df['Task'] == 'Start of engineering observations']['Start'].va
 science_ops = df[df['Task'] ==  'Science Operations']['Start'].values[0]
 ssp_end = df[df['Task'] == 'Call for SSP']['Start'].values[0]
 
-#print(f'{arms_full} {commissioning_start} {commissioning_end} {ssp_end}')
-
 fig = ff.create_gantt(df, colors=catColors, index_col='Category',
                       show_colorbar=False, 
                       bar_width=0.1, 
                       showgrid_x=True, 
                       showgrid_y=False, 
-                      title="DRP Plan")
+                      title="DRP Plan",
+                      height=1000)
 fig.update_layout(plot_bgcolor='rgba(0,0,0, 0.1)')
 
 for mls_yr, mls_text in {arms_full: 'R+B+N', 
@@ -66,10 +67,10 @@ for mls_yr, mls_text in {arms_full: 'R+B+N',
 fig.show()
 
 
-# In[ ]:
+# In[31]:
 
 
-
+df
 
 
 # In[ ]:

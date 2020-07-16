@@ -1,10 +1,15 @@
 Task,Start,Finish,Complete,Category
-PSF modelling (B+R), 2020-05-01, 2020-08-30,0, PSF
+PSF model self-consistent across defocuses, 2020-06-01, 2020-08-30,0, PSF
+PSF model self-consistent within same fiber, 2020-09-01, 2020-10-01, 0, PSF
+PSF: interpolate in zernike space, 2020-11-01, 2020-12-31, 0, PSF
+PSF modelling (600 fibers), 2021-02-01, 2021-04-01, 0, PSF
 PSF modelling (N), 2020-10-01, 2021-01-30,0, PSF
 FRD: metric for quantifying effect, 2020-07-01, 2020-07-20, 0, PSF
-FRD modelling, 2019-09-01, 2021-06-01, 0, PSF
-Arc line intensity modelling, 2019-06-1, 2020-08-01, 0, PSF
-Arc subtraction, 2020-09-01, 2020-10-01, 0, PSF
+FRD modelling, 2019-09-01, 2021-01-01, 0, PSF
+FRD effect w/cable B, 2021-01-01, 2021-04-01, 0, PSF
+FRD effect w/cobra movement, 2021-03-01, 2021-04-01, 0, PSF
+Arc line intensity modelling, 2019-06-1, 2021-02-01, 0, PSF
+Arc subtraction, 2021-02-01, 2021-03-31, 0, PSF
 Consistent 2D model for detectormap, 2020-08-01, 2020-10-01, 0, WavelengthCalibration
 Improved wavelength soln (< 2-5 km/s), 2020-10-01, 2020-12-01, 0, WavelengthCalibration
 Improved wavelength soln (< 1 km/s), 2021-04-01, 2021-08-01, 0, WavelengthCalibration
@@ -25,6 +30,7 @@ Call for SSP, 2022-04-01, 2022-05-01, 0, Project
 End of SSP Proposal Review, 2022-10-01, 2022-10-01, 0, Project
 Readiness review of inst for science, 2022-08-01, 2022-09-01, 0, Project
 Science Operations, 2023-02-01, 2025-01-01, 0, Project
+First cable B@Subaru, 2020-12-01, 2020-12-31,0, Hardware
 SM1(B+R)@Subaru, 2019-12-01, 2020-06-02, 0, Hardware
 NCU1@LAM, 2020-09-01, 2020-10-01, 0, Hardware
 SM2(B+R)@LAM, 2020-05-01, 2020-11-01, 0, Hardware
