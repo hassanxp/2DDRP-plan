@@ -1,5 +1,6 @@
 Task,Start,Finish,Complete,Category
 PSF model self-consistent across defocuses, 2020-06-01, 2020-08-30,0, PSF
+PSF model (B detector modeling), 2020-08-01, 2020-09-01, 0, PSF
 PSF model self-consistent within same fiber, 2020-09-01, 2020-10-01, 0, PSF
 PSF: interpolate in zernike space, 2020-11-01, 2020-12-31, 0, PSF
 PSF modelling (600 fibers), 2021-02-01, 2021-04-01, 0, PSF
@@ -8,7 +9,8 @@ FRD: metric for quantifying effect, 2020-07-01, 2020-07-20, 0, PSF
 FRD modelling, 2019-09-01, 2021-01-01, 0, PSF
 FRD effect w/cable B, 2021-01-01, 2021-04-01, 0, PSF
 FRD effect w/cobra movement, 2021-03-01, 2021-04-01, 0, PSF
-Arc line intensity modelling, 2019-06-1, 2021-02-01, 0, PSF
+Arc line intensity list, 2020-08-01, 2020-09-01, 0, PSF
+Arc line amplitude modelling, 2019-06-1, 2021-02-01, 0, PSF
 Arc subtraction, 2021-02-01, 2021-03-31, 0, PSF
 Consistent 2D model for detectormap, 2020-08-01, 2020-10-01, 0, WavelengthCalibration
 Improved wavelength soln (< 2-5 km/s), 2020-10-01, 2020-12-01, 0, WavelengthCalibration
@@ -17,14 +19,17 @@ Initial sky subtraction, 2019-09-01, 2019-12-31, 0, Sky
 Telluric Correction, 2020-09-01, 2020-12-31, 0, Sky
 OH line modelling, 2020-09-01, 2021-04-01, 0, Sky
 Improved sky subtraction, 2021-02-01, 2024-01-01, 0, Sky
+Flux Calibration: interpolation, 2020-02-01, 2020-09-01, 0, Calibration
+Flux Calibration: stellar typing, 2020-09-01, 2021-01-01, 0, Calibration
+Flux Calibration: f-star selection, 2021-01-01, 2021-03-01, 0, Calibration
 H4RG modelling, 2020-08-01, 2021-08-01, 0, Calibration
-Flux Calibration, 2020-02-01, 2021-06-01, 0, Calibration
+Quartz color filter calibration, 2021-06-01, 2021-08-01, 0, Calibration
 CCD Crosstalk, 2021-01-01, 2021-06-01, 0, Calibration
+CCD Brighter/Fatter, 2021-01-01, 2021-06-01, 0, Calibration
 DCR, 2021-04-01, 2021-12-31, 0, Calibration
 Arm merging (B+R/M+N), 2020-05-01, 2020-06-01, 0, Infra
 YAML pipeline config, 2020-02-01, 2020-08-30, 0, Infra
 LSST gen3, 2020-09-01, 2020-10-01, 0, Infra
-Sky exposures, 2021-02-01, 2025-01-01, 0, Project
 Start of engineering observations, 2021-06-01, 2023-01-30, 0, Project
 Call for SSP, 2022-04-01, 2022-05-01, 0, Project
 End of SSP Proposal Review, 2022-10-01, 2022-10-01, 0, Project

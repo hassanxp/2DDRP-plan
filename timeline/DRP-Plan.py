@@ -22,7 +22,7 @@ catColors = dict(Project='rgb(255, 51, 0)',
                  Infra='rgb(153, 0, 153)')
 
 
-# In[35]:
+# In[41]:
 
 
 # Load in CSV
@@ -44,7 +44,7 @@ fig = ff.create_gantt(df, colors=catColors, index_col='Category',
                       showgrid_x=True, 
                       showgrid_y=False, 
                       title="DRP Plan",
-                      height=1000)
+                      height=750)
 fig.update_layout(plot_bgcolor='rgba(0,0,0, 0.1)')
 
 for mls_yr, mls_text in {arms_full: 'R+B+N', 
