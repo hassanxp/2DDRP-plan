@@ -41,12 +41,14 @@ def plt_line(fig, mls_yr, mls_text, color="gray"):
     )
 
 
-# In[18]:
+# In[27]:
 
 
 # Load in CSV
-# Last row is usually plotted first, so reverse that.
-df = pd.read_csv('drp-plan.csv').applymap(lambda x: x.strip() if type(x)==str else x).iloc[::-1]
+df0 = pd.read_csv('drp-plan.csv').applymap(lambda x: x.strip() if type(x)==str else x).iloc[::-1]
+
+# Filter out columns not needed for gantt plot
+df = df0[['Task', 'Start', 'Finish', 'Complete', 'Category']].copy()
 
 for cat in set(df['Category']):
     if cat not in catColors:
@@ -75,10 +77,16 @@ for mls_yr, mls_text in {arms_full: 'R+B+N',
 fig.show()
 
 
-# In[4]:
+# In[28]:
 
 
 df
+
+
+# In[ ]:
+
+
+
 
 
 # In[ ]:
