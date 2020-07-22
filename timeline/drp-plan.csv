@@ -1,8 +1,8 @@
 Task,Start,Finish,Complete,Category
 PSF model self-consistent across defocuses, 2020-06-01, 2020-08-30,0, PSF
 PSF model (B detector modeling), 2020-08-01, 2020-09-01, 0, PSF
-PSF model self-consistent within same fiber, 2020-09-01, 2020-10-01, 0, PSF
-PSF: interpolate in zernike space, 2020-11-01, 2020-12-31, 0, PSF
+PSF model self-consistent within same fiber, 2020-09-01, 2020-11-01, 0, PSF
+PSF: interpolate in zernike space, 2020-11-01, 2021-03-31, 0, PSF
 PSF modelling (600 fibers), 2021-02-01, 2021-04-01, 0, PSF
 PSF modelling (N), 2020-10-01, 2021-01-30,0, PSF
 FRD: metric for quantifying effect, 2020-07-01, 2020-07-20, 0, PSF
@@ -22,15 +22,15 @@ Improved sky subtraction, 2021-02-01, 2024-01-01, 0, Sky
 Flux Calibration: interpolation, 2020-02-01, 2020-09-01, 0, Calibration
 Flux Calibration: stellar typing, 2020-09-01, 2021-01-01, 0, Calibration
 Flux Calibration: f-star selection, 2021-01-01, 2021-03-01, 0, Calibration
-H4RG modelling, 2020-08-01, 2021-08-01, 0, Calibration
-Quartz color filter calibration, 2021-06-01, 2021-08-01, 0, Calibration
+H4RG S/W, 2020-08-01, 2021-08-01, 0, Calibration
+Quartz color filter calibration, 2022-01-01, 2022-04-01, 0, Calibration
 CCD Crosstalk, 2021-01-01, 2021-06-01, 0, Calibration
 CCD Brighter/Fatter, 2021-01-01, 2021-06-01, 0, Calibration
-DCR, 2021-04-01, 2021-12-31, 0, Calibration
+DCR, 2021-07-01, 2022-02-01, 0, Calibration
 Arm merging (B+R/M+N), 2020-05-01, 2020-06-01, 0, Infra
 YAML pipeline config, 2020-02-01, 2020-08-30, 0, Infra
 LSST gen3, 2020-09-01, 2020-10-01, 0, Infra
-Start of engineering observations, 2021-06-01, 2023-01-30, 0, Project
+Engineering observations, 2021-06-01, 2023-01-30, 0, Project
 Call for SSP, 2022-04-01, 2022-05-01, 0, Project
 End of SSP Proposal Review, 2022-10-01, 2022-10-01, 0, Project
 Readiness review of inst for science, 2022-08-01, 2022-09-01, 0, Project
