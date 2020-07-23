@@ -1,6 +1,6 @@
 Task,Start,Finish,Complete,Category,Description,Price,Caplar,Belland,Yasuda,Yabe,Yamashita
 PSF model self-consistent across defocuses,2020-06-01,2020-08-30,0,PSF, "Ensure that illumination estimate of the pupil should be constant across different defocuses for single spot.", 5, 30, 0, 0, 0, 0
-PSF model (b detector modeling),2020-08-01,2020-09-01,0,PSF, "While the PSF for the r detector has been examined, the PSF modelling for the b detector has not yet been addressed. Address that.", 0, 12, 0, 0, 0, 0
+PSF model (B detector modeling),2020-08-01,2020-09-01,0,PSF, "While the PSF for the r detector has been examined, the PSF modelling for the B detector has not yet been addressed. Address that.", 0, 12, 0, 0, 0, 0
 PSF model self-consistent within same fiber,2020-09-01,2020-11-01,0,PSF, "Ensure that illumination estimate of the pupil should be constant across different spots for single fiber.", 2, 24, 0, 0, 0, 0
 PSF: interpolate in zernike space,2020-11-01,2021-03-31,0,PSF, "Interpolate PSF model in zernike space as opposed to detector space.", 10, 60, 0, 0, 0, 0
 PSF modelling (600 fibers),2021-02-01,2021-04-01,0,PSF, "Check that the PSF model is applicable for a full density exposure.", 5, 20, 0, 0, 0, 0
@@ -20,10 +20,10 @@ Telluric Correction,2020-09-01,2020-12-31,0,Sky, "Model telluric features and im
 OH line modelling,2020-09-01,2021-04-01,0,Sky, "Model the OH sky lines.", 0, 0, 0, 15, 0, 0
 Improved sky subtraction,2021-02-01,2024-01-01,0,Sky, "Using a sky model, implement a sky subtraction algorithm in the pipeline.", 30, 5, 0, 0, 0, 0
 Flux Calibration: interpolation,2020-02-01,2020-09-01,0,Calibration, "Interpolate the AMBRE model spectra to get an accurate spectral energy distribution for a given set of stella parameters.", 0, 0, 0, 0, 0, 20
-Flux Calibration: stellar typing,2020-09-01,2021-01-01,0,Calibration, "Determine the stellar type for given stellar model parameter.", 0, 0, 0, 0, 0, 10
-Flux Calibration: f-star selection,2021-01-01,2021-03-01,0,Calibration, "Determine F-star candidates that can be used for flux calibratio.", 0, 0, 0, 0, 0, 6
-NIR processing,2020-08-01,2021-08-01,0,Calibration, "Implement support for processing NIR data in the 2D DRP pipelin.", 50, 0, 0, 0, 0,0
-Quartz color filter calibration,2022-01-01,2022-04-01,0,Calibration, "Correct for absorption effects caused by the quartz color filte.", 2, 3, 0, 0, 0, 0 
+Flux Calibration: stellar typing,2020-09-01,2021-01-01,0,Calibration, "Determine the stellar type for given set of stellar model parameters.", 0, 0, 0, 0, 0, 10
+Flux Calibration: f-star selection,2021-01-01,2021-03-01,0,Calibration, "Determine F-star candidates that can be used for flux calibration.", 0, 0, 0, 0, 0, 6
+NIR processing,2020-08-01,2021-08-01,0,Calibration, "Implement support for processing NIR data in the 2D DRP pipeline.", 50, 0, 0, 0, 0,0
+Quartz color filter calibration,2022-01-01,2022-04-01,0,Calibration, "Correct for absorption effects caused by the quartz color filter.", 2, 3, 0, 0, 0, 0 
 CCD Crosstalk,2021-01-01,2021-06-01,0,Calibration, "Correct exposures for crosstalk effect.", 5, 3, 0, 0, 0, 0 
 CCD Brighter/Fatter,2021-01-01,2021-06-01,0,Calibration, "Correct exposures for CCD brighter/fatter effect.", 20, 0, 0, 0, 0, 0 
 DCR,2021-07-01,2022-02-01,0,Calibration, "Correct spectra for Differential Chromatic Refraction effect.",10, 0, 0, 10, 0, 0 

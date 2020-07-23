@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[13]:
+# In[1]:
 
 
 import plotly.figure_factory as ff
@@ -10,7 +10,7 @@ import random
 import plotly.graph_objects as go
 
 
-# In[24]:
+# In[2]:
 
 
 catColors = dict(Project='rgb(255, 51, 0)', 
@@ -22,7 +22,7 @@ catColors = dict(Project='rgb(255, 51, 0)',
                  Infra='rgb(153, 0, 153)')
 
 
-# In[25]:
+# In[3]:
 
 
 def plt_line(fig, mls_yr, mls_text, color="gray"):
@@ -41,21 +41,21 @@ def plt_line(fig, mls_yr, mls_text, color="gray"):
     )
 
 
-# In[29]:
+# In[4]:
 
 
 # Load in CSV
-df0 = pd.read_csv('drp-plan.csv').applymap(lambda x: x.strip() if type(x)==str else x).iloc[::-1]
+df0 = pd.read_csv('drp-plan.csv', skipinitialspace=True,  quotechar='"').applymap(lambda x: x.strip() if type(x)==str else x).iloc[::-1]
 
 
-# In[30]:
+# In[5]:
 
 
 # Filter out columns not needed for gantt plot
 df = df0[['Task', 'Start', 'Finish', 'Complete', 'Category']].copy()
 
 
-# In[62]:
+# In[6]:
 
 
 for cat in set(df['Category']):
