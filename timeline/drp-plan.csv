@@ -6,11 +6,11 @@ PSF: interpolate in zernike space,2020-11-01,2021-03-31,0,PSF,, 10, 60, 0, 0, 0,
 PSF modelling (600 fibers),2021-02-01,2021-04-01,0,PSF,, 5, 20, 0, 0, 0, 0
 PSF modelling (N),2020-10-01,2021-01-30,0,PSF,, 5, 20, 0, 0, 0, 0
 FRD: metric for quantifying effect,2020-07-01,2020-07-31,0,PSF,, 0, 2, 5, 0, 0, 0
-FRD modelling,2019-09-01,2021-01-01,0,PSF, OVERLAP-BREAK-THIS-DOWN, 0, 30, 150, 0, 0, 0
+FRD modelling,2019-09-01,2021-01-01,0,PSF,, 0, 30, 150, 0, 0, 0
 FRD effect w/cable B,2021-01-01,2021-04-01,0,PSF,, 0, 10, 20, 0, 0, 0
 FRD effect w/cobra movement,2021-03-01,2021-04-01,0,PSF,, 0, 5, 5, 0, 0, 0
 Arc line intensity list,2020-08-01,2020-09-01,0,PSF,, 2, 0, 0, 0, 0, 0
-Arc line amplitude modelling,2019-06-01,2021-02-01,0,PSF,, 0,0,0,60, 0, 0
+Arc line amplitude modelling,2019-06-01,2021-02-01,0,PSF,, 0,0,0, 60, 0, 0
 Arc subtraction,2021-02-01,2021-03-31,0,PSF,, 20, 0, 0, 0, 0, 0
 Consistent 2D model for detectormap,2020-08-01,2020-10-01,0,WavelengthCal,, 15, 0, 0, 0, 0, 0
 Improved wavelength soln (2-5 km/s),2020-10-01,2020-12-01,0,WavelengthCal,, 10, 2, 0, 0, 0, 0
@@ -23,13 +23,13 @@ Flux Calibration: interpolation,2020-02-01,2020-09-01,0,Calibration,, 0, 0, 0, 0
 Flux Calibration: stellar typing,2020-09-01,2021-01-01,0,Calibration,, 0, 0, 0, 0, 0, 10
 Flux Calibration: f-star selection,2021-01-01,2021-03-01,0,Calibration,, 0, 0, 0, 0, 0, 6
 H4RG S/W,2020-08-01,2021-08-01,0,Calibration,, 50, 0, 0, 0, 0,0
-Quartz color filter calibration,2022-01-01,2022-04-01,0,Calibration,, 0, 0, 0, 0, 0, 0 
-CCD Crosstalk,2021-01-01,2021-06-01,0,Calibration,, 0, 0, 0, 0, 0, 0 
-CCD Brighter/Fatter,2021-01-01,2021-06-01,0,Calibration,, 0, 0, 0, 0, 0, 0 
-DCR,2021-07-01,2022-02-01,0,Calibration,,0, 0, 0, 0, 0, 0 
-Arm merging (B+R/M+N),2020-05-01,2020-06-01,0,Infra,,0, 0, 0, 0, 0, 0 
-YAML pipeline config,2020-02-01,2020-08-30,0,Infra,,0, 0, 0, 0, 0, 0 
-LSST gen3,2020-09-01,2020-10-01,0,Infra,,0, 0, 0, 0, 0, 0 
+Quartz color filter calibration,2022-01-01,2022-04-01,0,Calibration,, 2, 3, 0, 0, 0, 0 
+CCD Crosstalk,2021-01-01,2021-06-01,0,Calibration,, 5, 3, 0, 0, 0, 0 
+CCD Brighter/Fatter,2021-01-01,2021-06-01,0,Calibration,, 20, 0, 0, 0, 0, 0 
+DCR,2021-07-01,2022-02-01,0,Calibration,,10, 0, 0, 10, 0, 0 
+Arm merging (B+R/M+N),2020-05-01,2020-06-01,0,Infra,,5, 0, 0, 0, 0, 0 
+YAML pipeline config,2020-02-01,2020-08-30,0,Infra,,5, 0, 0, 0, 0, 0 
+LSST gen3,2020-09-01,2020-10-01,0,Infra,,5, 0, 0, 0, 0, 0 
 Engineering observations,2021-06-01,2023-01-30,0,Project,,0, 0, 0, 0, 0, 0 
 Call for SSP,2022-04-01,2022-05-01,0,Project,,0, 0, 0, 0, 0, 0 
 End of SSP Proposal Review,2022-10-01,2022-10-01,0,Project,,0, 0, 0, 0, 0, 0 
