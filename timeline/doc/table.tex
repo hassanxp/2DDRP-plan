@@ -1,6 +1,6 @@
-\begin{longtable}{lllp{2cm}l}
+\begin{longtable}{p{2cm}llp{2cm}l}
 \toprule
-                                        Task &       Start &      Finish & Description &                Resource \\
+                                        Task &       Start &      Finish &                                        Description &                Resource \\
 \midrule
 \endhead
 \midrule
@@ -10,35 +10,35 @@
 
 \bottomrule
 \endlastfoot
-  PSF model self-consistent across defocuses &  2020-06-01 &  2020-08-30 &        a, b &      Price:5, Caplar:30 \\
-             PSF model (B detector modeling) &  2020-08-01 &  2020-09-01 &         NaN &               Caplar:12 \\
- PSF model self-consistent within same fiber &  2020-09-01 &  2020-11-01 &         NaN &      Price:2, Caplar:24 \\
-           PSF: interpolate in zernike space &  2020-11-01 &  2021-03-31 &         NaN &     Price:10, Caplar:60 \\
-                  PSF modelling (600 fibers) &  2021-02-01 &  2021-04-01 &         NaN &      Price:5, Caplar:20 \\
-                           PSF modelling (N) &  2020-10-01 &  2021-01-30 &         NaN &      Price:5, Caplar:20 \\
-          FRD: metric for quantifying effect &  2020-07-01 &  2020-07-31 &         NaN &     Caplar:2, Belland:5 \\
-                               FRD modelling &  2019-09-01 &  2021-01-01 &         NaN &  Caplar:30, Belland:150 \\
-                        FRD effect w/cable B &  2021-01-01 &  2021-04-01 &         NaN &   Caplar:10, Belland:20 \\
-                 FRD effect w/cobra movement &  2021-03-01 &  2021-04-01 &         NaN &     Caplar:5, Belland:5 \\
-                     Arc line intensity list &  2020-08-01 &  2020-09-01 &         NaN &                 Price:2 \\
-                Arc line amplitude modelling &  2019-06-01 &  2021-02-01 &         NaN &               Yasuda:60 \\
-                             Arc subtraction &  2021-02-01 &  2021-03-31 &         NaN &                Price:20 \\
-         Consistent 2D model for detectormap &  2020-08-01 &  2020-10-01 &         NaN &                Price:15 \\
-         Improved wavelength soln (2-5 km/s) &  2020-10-01 &  2020-12-01 &         NaN &      Price:10, Caplar:2 \\
-           Improved wavelength soln (1 km/s) &  2021-04-01 &  2021-08-01 &         NaN &      Price:15, Caplar:2 \\
-                     Initial sky subtraction &  2019-09-01 &  2019-12-31 &         NaN &                         \\
-                         Telluric Correction &  2020-09-01 &  2020-12-31 &         NaN &                 Yabe:20 \\
-                           OH line modelling &  2020-09-01 &  2021-04-01 &         NaN &               Yasuda:15 \\
-                    Improved sky subtraction &  2021-02-01 &  2024-01-01 &         NaN &      Price:30, Caplar:5 \\
-             Flux Calibration: interpolation &  2020-02-01 &  2020-09-01 &         NaN &            Yamashita:20 \\
-            Flux Calibration: stellar typing &  2020-09-01 &  2021-01-01 &         NaN &            Yamashita:10 \\
-          Flux Calibration: f-star selection &  2021-01-01 &  2021-03-01 &         NaN &             Yamashita:6 \\
-                                    H4RG S/W &  2020-08-01 &  2021-08-01 &         NaN &                Price:50 \\
-             Quartz color filter calibration &  2022-01-01 &  2022-04-01 &         NaN &       Price:2, Caplar:3 \\
-                               CCD Crosstalk &  2021-01-01 &  2021-06-01 &         NaN &       Price:5, Caplar:3 \\
-                         CCD Brighter/Fatter &  2021-01-01 &  2021-06-01 &         NaN &                Price:20 \\
-                                         DCR &  2021-07-01 &  2022-02-01 &         NaN &     Price:10, Yasuda:10 \\
-                       Arm merging (B+R/M+N) &  2020-05-01 &  2020-06-01 &         NaN &                 Price:5 \\
-                        YAML pipeline config &  2020-02-01 &  2020-08-30 &         NaN &                 Price:5 \\
-                                   LSST gen3 &  2020-09-01 &  2020-10-01 &         NaN &                 Price:5 \\
+  PSF model self-consistent across defocuses &  2020-06-01 &  2020-08-30 &  Ensure that illumination estimate of the pupil... &      Price:5, Caplar:30 \\
+             PSF model (b detector modeling) &  2020-08-01 &  2020-09-01 &  While the PSF for the r detector has been exam... &               Caplar:12 \\
+ PSF model self-consistent within same fiber &  2020-09-01 &  2020-11-01 &  Ensure that illumination estimate of the pupil... &      Price:2, Caplar:24 \\
+           PSF: interpolate in zernike space &  2020-11-01 &  2021-03-31 &  Interpolate PSF model in zernike space as oppo... &     Price:10, Caplar:60 \\
+                  PSF modelling (600 fibers) &  2021-02-01 &  2021-04-01 &  Check that the PSF model is applicable for a f... &      Price:5, Caplar:20 \\
+                           PSF modelling (N) &  2020-10-01 &  2021-01-30 &                 Model the PSF for the NIR detector &      Price:5, Caplar:20 \\
+          FRD: metric for quantifying effect &  2020-07-01 &  2020-07-31 &  Provide a quantitive measurement for the effec... &     Caplar:2, Belland:5 \\
+                               FRD modelling &  2019-09-01 &  2021-01-01 &         Model the effect of the FRD on the 2D PSF. &  Caplar:30, Belland:150 \\
+                        FRD effect w/cable B &  2021-01-01 &  2021-04-01 &  Measure the contribution to the FRD based on t... &   Caplar:10, Belland:20 \\
+                 FRD effect w/cobra movement &  2021-03-01 &  2021-04-01 &  Measure the contribution to the FRD due to ind... &     Caplar:5, Belland:5 \\
+                      Arc line strength list &  2020-08-01 &  2020-09-01 &  Update the line list with line strengths measu... &                 Price:2 \\
+                Arc line amplitude modelling &  2019-06-01 &  2021-02-01 &             Model the arc line amplitude variation &               Yasuda:60 \\
+                             Arc subtraction &  2021-02-01 &  2021-03-31 &  Subtract arc data based on knowledge of PSF an... &                Price:20 \\
+         Consistent 2D model for detectormap &  2020-08-01 &  2020-10-01 &  Provide a self-consistent model of the detecto... &                Price:15 \\
+         Improved wavelength soln (2-5 km/s) &  2020-10-01 &  2020-12-01 &   Improve the wavelength solution down to 2-5 km/s &      Price:10, Caplar:2 \\
+           Improved wavelength soln (1 km/s) &  2021-04-01 &  2021-08-01 &  Improve the wavelength solution down to 1 km/s... &      Price:15, Caplar:2 \\
+                     Initial sky subtraction &  2019-09-01 &  2019-12-31 &  Provide an initial implementation for sky subt... &                         \\
+                         Telluric Correction &  2020-09-01 &  2020-12-31 &  Model telluric features and implement a correc... &                 Yabe:20 \\
+                           OH line modelling &  2020-09-01 &  2021-04-01 &                             Model the OH sky lines &               Yasuda:15 \\
+                    Improved sky subtraction &  2021-02-01 &  2024-01-01 &  Using a sky model, implement a sky subtraction... &      Price:30, Caplar:5 \\
+             Flux Calibration: interpolation &  2020-02-01 &  2020-09-01 &  Interpolate the AMBRE model spectra to get an ... &            Yamashita:20 \\
+            Flux Calibration: stellar typing &  2020-09-01 &  2021-01-01 &  Determine the stellar type for given stellar m... &            Yamashita:10 \\
+          Flux Calibration: f-star selection &  2021-01-01 &  2021-03-01 &  Determine F-star candidates that can be used f... &             Yamashita:6 \\
+                              NIR processing &  2020-08-01 &  2021-08-01 &  Implement support for processing NIR data in t... &                Price:50 \\
+             Quartz color filter calibration &  2022-01-01 &  2022-04-01 &  Correct for absorption effects caused by the q... &       Price:2, Caplar:3 \\
+                               CCD Crosstalk &  2021-01-01 &  2021-06-01 &            Correct exposures for crosstalk effects &       Price:5, Caplar:3 \\
+                         CCD Brighter/Fatter &  2021-01-01 &  2021-06-01 &  Correct exposures for CCD brighter/fatter effects &                Price:20 \\
+                                         DCR &  2021-07-01 &  2022-02-01 &  Correct spectra for Differential Chromatic Ref... &     Price:10, Yasuda:10 \\
+                       Arm merging (B+R/M+N) &  2020-05-01 &  2020-06-01 &     Merge arm data based on all detector passbands &                 Price:5 \\
+                        YAML pipeline config &  2020-02-01 &  2020-08-30 &  Implement a mechanism for processing data base... &                 Price:5 \\
+                                   LSST gen3 &  2020-09-01 &  2020-10-01 &  Update the pipeline based on the new LSST midd... &                 Price:5 \\
 \end{longtable}

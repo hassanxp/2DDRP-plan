@@ -28,6 +28,6 @@ for index, row in df2.iterrows():
 df3 = df2[['Task', 'Start', 'Finish', 'Description', 'Resource']].copy()
 
 with open("doc/table.tex", "w") as text_file:
-    text_file.write(df3.to_latex(index=False, longtable=True, column_format='lllp{2cm}l'))
+    text_file.write(df3.to_latex(index=False, longtable=True, column_format='p{2cm}llp{2cm}l'))
 
 
