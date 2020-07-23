@@ -22,7 +22,7 @@ catColors = dict(Project='rgb(255, 51, 0)',
                  Infra='rgb(153, 0, 153)')
 
 
-# In[12]:
+# In[3]:
 
 
 def plt_line(fig, mls_yr, mls_text, color="gray"):
@@ -41,14 +41,22 @@ def plt_line(fig, mls_yr, mls_text, color="gray"):
     )
 
 
-# In[27]:
+# In[10]:
 
 
 # Load in CSV
 df0 = pd.read_csv('drp-plan.csv').applymap(lambda x: x.strip() if type(x)==str else x).iloc[::-1]
 
+
+# In[11]:
+
+
 # Filter out columns not needed for gantt plot
 df = df0[['Task', 'Start', 'Finish', 'Complete', 'Category']].copy()
+
+
+# In[12]:
+
 
 for cat in set(df['Category']):
     if cat not in catColors:
@@ -75,12 +83,6 @@ for mls_yr, mls_text in {arms_full: 'R+B+N',
                  ssp_end : 'Call for SSP'}.items():
     plt_line(fig, mls_yr, mls_text, color='gray')
 fig.show()
-
-
-# In[28]:
-
-
-df
 
 
 # In[ ]:
