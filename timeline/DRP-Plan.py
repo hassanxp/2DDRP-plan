@@ -85,19 +85,6 @@ for mls_yr, mls_text in {arms_full: 'R+B+N',
 fig.show()
 
 
-# In[55]:
-
-
-hp_indices = df[(df['Category']=='Hardware') | (df['Category']=='Project')].index
-
-
-# In[56]:
-
-
-df_nohp = df.drop(hp_indices)
-df_nohp
-
-
 # In[ ]:
 
 
