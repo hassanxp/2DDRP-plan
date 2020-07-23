@@ -1,0 +1,18 @@
+1. PSF (10 fibre exposures)
+
+Verify using an independent set of arcs across all? lamps that the PSF 
+for each of 10 traces can be correctly modeled such that the residuals are 
+within TBD.
+
+2. PSF (600 fiber exposures)
+
+a) Verify that the PSF model based on 10 fibers  can be interpolated across arcs exposures 
+for all 600 fibers, such that the residuals are within TBD.
+
+b) Verify using odd/even fiber exposures that the interpolated PSF model can be fitted
+
+c) [Following update of PSF model for 600 fibers] verify that a full 600 fiber exposure
+can be correctly fitted.
+
+
+ 
