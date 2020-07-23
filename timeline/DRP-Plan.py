@@ -41,22 +41,21 @@ def plt_line(fig, mls_yr, mls_text, color="gray"):
     )
 
 
-# In[26]:
+# In[29]:
 
 
 # Load in CSV
 df0 = pd.read_csv('drp-plan.csv').applymap(lambda x: x.strip() if type(x)==str else x).iloc[::-1]
-df0
 
 
-# In[27]:
+# In[30]:
 
 
 # Filter out columns not needed for gantt plot
 df = df0[['Task', 'Start', 'Finish', 'Complete', 'Category']].copy()
 
 
-# In[28]:
+# In[31]:
 
 
 for cat in set(df['Category']):
@@ -86,10 +85,17 @@ for mls_yr, mls_text in {arms_full: 'R+B+N',
 fig.show()
 
 
-# In[ ]:
+# In[55]:
 
 
+hp_indices = df[(df['Category']=='Hardware') | (df['Category']=='Project')].index
 
+
+# In[56]:
+
+
+df_nohp = df.drop(hp_indices)
+df_nohp
 
 
 # In[ ]:
