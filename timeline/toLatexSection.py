@@ -16,10 +16,7 @@ df0 = pd.read_csv('drp-plan.csv', skipinitialspace=True, quotechar='"' ).applyma
 hp_indices = df0[(df0['Category']=='Hardware') | (df0['Category']=='Project')].index
 df = df0.drop(hp_indices)
 
-with open("doc/tasks.tex", "w") as tf:
-
-    tf.write('\section{Tasks}')
-
+with open("doc/task_list.tex", "w") as tf:
     for index, row in df.iterrows():
         tf.write(f'\subsection{{{row["Task"]}}}\n\n')
         tf.write(f'{row["Description"]}\n\n')
