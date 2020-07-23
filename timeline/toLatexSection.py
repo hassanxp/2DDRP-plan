@@ -9,7 +9,7 @@ def process_resources(row):
 
 
 # Load in CSV
-df0 = pd.read_csv('drp-plan.csv').applymap(lambda x: x.strip() if type(x)==str else x)
+df0 = pd.read_csv('drp-plan.csv', skipinitialspace=True, quotechar='"' ).applymap(lambda x: x.strip() if type(x)==str else x)
 
 # Remove Project and Hardware tasks
 

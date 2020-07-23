@@ -1,5 +1,5 @@
 Task,Start,Finish,Complete,Category,Description,Price,Caplar,Belland,Yasuda,Yabe,Yamashita
-PSF model self-consistent across defocuses,2020-06-01,2020-08-30,0,PSF,, 5, 30, 0, 0, 0, 0
+PSF model self-consistent across defocuses,2020-06-01,2020-08-30,0,PSF, "a, b", 5, 30, 0, 0, 0, 0
 PSF model (B detector modeling),2020-08-01,2020-09-01,0,PSF,, 0, 12, 0, 0, 0, 0
 PSF model self-consistent within same fiber,2020-09-01,2020-11-01,0,PSF,, 2, 24, 0, 0, 0, 0
 PSF: interpolate in zernike space,2020-11-01,2021-03-31,0,PSF,, 10, 60, 0, 0, 0, 0

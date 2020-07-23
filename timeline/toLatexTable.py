@@ -13,7 +13,7 @@ def process_resources(row):
 
 # Load in CSV
 # Last row is usually plotted first, so reverse that.
-df0 = pd.read_csv('drp-plan.csv').applymap(lambda x: x.strip() if type(x)==str else x)
+df0 = pd.read_csv('drp-plan.csv', skipinitialspace=True,  quotechar='"').applymap(lambda x: x.strip() if type(x)==str else x)
 
 df1 = df0[['Task', 'Start', 'Finish', 'Category', 'Description', 'Price', 'Caplar', 'Belland', 'Yasuda', 'Yabe', 'Yamashita']].copy()
 
