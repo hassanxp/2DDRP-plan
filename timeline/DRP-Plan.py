@@ -55,7 +55,7 @@ df0 = pd.read_csv('drp-plan.csv').applymap(lambda x: x.strip() if type(x)==str e
 df = df0[['Task', 'Start', 'Finish', 'Complete', 'Category']].copy()
 
 
-# In[31]:
+# In[62]:
 
 
 for cat in set(df['Category']):
@@ -64,7 +64,7 @@ for cat in set(df['Category']):
 
 arms_full = df[df['Task'] == 'SM3(B+R+N)@LAM']['Start'].values[0]
 engobs_start = df[df['Task'] == 'Engineering observations']['Start'].values[0]
-science_ops = df[df['Task'] ==  'Science Operations']['Start'].values[0]
+engobs_end = df[df['Task'] ==  'Engineering observations']['Finish'].values[0]
 ssp_end = df[df['Task'] == 'Call for SSP']['Start'].values[0]
 
 fig = ff.create_gantt(df, colors=catColors, index_col='Category',
@@ -76,12 +76,12 @@ fig = ff.create_gantt(df, colors=catColors, index_col='Category',
                       height=750)
 fig.update_layout(plot_bgcolor='rgba(0,0,0, 0.1)')
 
-plt_line(fig, '2021-08-31', 'MSIP End', color='magenta')
-for mls_yr, mls_text in {arms_full: 'R+B+N', 
-                 engobs_start: 'Eng Obs Start', 
-                 science_ops : 'Science Ops Start', 
-                 ssp_end : 'Call for SSP'}.items():
-    plt_line(fig, mls_yr, mls_text, color='gray')
+plt_line(fig, '2021-08-31', 'MSIP End', color='red')
+plt_line(fig, arms_full, 'R+B+N', color='gray')
+plt_line(fig, engobs_start, 'Eng Obs Start', color='green')
+plt_line(fig, ssp_end, 'Call for SSP', color='black')
+plt_line(fig, engobs_end , 'Eng Obs End', color='green')
+
 fig.show()
 
 
