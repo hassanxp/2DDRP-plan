@@ -13,8 +13,8 @@ Arc line intensity list,2020-08-01,2020-09-01,0,PSF,, 2, 0, 0, 0, 0, 0
 Arc line amplitude modelling,2019-06-01,2021-02-01,0,PSF,, 0,0,0,60, 0, 0
 Arc subtraction,2021-02-01,2021-03-31,0,PSF,, 20, 0, 0, 0, 0, 0
 Consistent 2D model for detectormap,2020-08-01,2020-10-01,0,WavelengthCal,, 15, 0, 0, 0, 0, 0
-Improved wavelength soln (< 2-5 km/s),2020-10-01,2020-12-01,0,WavelengthCal,, 10, 2, 0, 0, 0, 0
-Improved wavelength soln (< 1 km/s),2021-04-01,2021-08-01,0,WavelengthCal,, 15, 2, 0, 0, 0, 0
+Improved wavelength soln (2-5 km/s),2020-10-01,2020-12-01,0,WavelengthCal,, 10, 2, 0, 0, 0, 0
+Improved wavelength soln (1 km/s),2021-04-01,2021-08-01,0,WavelengthCal,, 15, 2, 0, 0, 0, 0
 Initial sky subtraction,2019-09-01,2019-12-31,0,Sky,, 0, 0, 0, 0, 0, 0
 Telluric Correction,2020-09-01,2020-12-31,0,Sky,, 0, 0, 0, 0, 20, 0
 OH line modelling,2020-09-01,2021-04-01,0,Sky,, 0, 0, 0, 15, 0, 0
