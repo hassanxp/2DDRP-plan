@@ -2,7 +2,7 @@ import pandas as pd
 
 def process_resources(row):
     resources = ""
-    for name in ['Price', 'Caplar', 'Belland', 'Yasuda', 'Yabe', 'Yamashita']:
+    for name in ['Price', 'Caplar', 'Belland', 'Yasuda', 'Yabe', 'Yamashita', 'Mineo']:
         if row[name] > 0:
             resources += f'{name} : {row[name]}, '
     return resources[:-2]
