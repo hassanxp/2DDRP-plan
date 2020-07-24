@@ -2,7 +2,7 @@ Task,Start,Finish,Complete,Category,Description,Price,Caplar,Belland,Yasuda,Yabe
 PSF model self-consistent across defocuses,2020-06-01,2020-08-30,0,PSF, "Ensure that illumination estimate of the pupil should be constant across different defocuses for single spot.", 5, 20, 0, 0, 0, 0, 0
 PSF model (B detector modeling),2020-08-01,2020-09-01,0,PSF, "While the PSF for the R detector has been examined, the PSF modelling for the B detector has not yet been addressed. Address that.", 0, 12, 0, 0, 0, 0, 0
 PSF model self-consistent within same fiber,2020-09-01,2020-11-01,0,PSF, "Ensure that illumination estimate of the pupil should be constant across different spots for single fiber.", 2, 24, 0, 0, 0, 0, 0
-PSF: interpolate in zernike space,2020-11-01,2021-03-31,0,PSF, "Interpolate PSF model in zernike space as opposed to detector space.", 10, 60, 0, 0, 0, 0, 0
+PSF: interpolate in zernike space,2020-11-01,2021-03-31,0,PSF, "Interpolate PSF model in zernike space as opposed to detector space.", 10, 40, 0, 0, 0, 0, 0
 PSF modelling (600 fibers),2021-02-01,2021-04-01,0,PSF, "Check that the PSF model is applicable for a full density exposure.", 5, 20, 0, 0, 0, 0, 0
 PSF modelling (N),2020-10-01,2021-01-30,0,PSF, "Model the PSF for the NIR detector.", 5, 20, 0, 0, 0, 0, 0
 FRD: metric for quantifying effect,2020-07-01,2020-07-31,0,PSF, "Provide a quantitive measurement for the effect of the FRD on the PSF.", 0, 2, 5, 0, 0, 0, 0
@@ -32,7 +32,7 @@ YAML pipeline config,2020-02-01,2020-08-30,0,Infra, "Implement a mechanism for p
 LSST gen3,2020-09-01,2020-10-01,0,Infra, "Update the pipeline based on the new LSST middleware generation.",5, 0, 0, 0, 0, 0, 0
 Engineering observations,2021-06-01,2023-01-30,0,Project,,0, 0, 0, 0, 0, 0, 0 
 Call for SSP,2022-04-01,2022-05-01,0,Project,,0, 0, 0, 0, 0, 0, 0
-End of SSP Proposal Review,2022-10-01,2022-10-01,0,Project,,0, 0, 0, 0, 0, 0, 0 
+End of SSP Proposal Review,2022-10-01,2022-10-02, 0,Project,,0, 0, 0, 0, 0, 0, 0 
 Readiness review of inst for science,2022-08-01,2022-09-01,0,Project,,0, 0, 0, 0, 0, 0, 0 
 Science Operations,2023-02-01,2025-01-01,0,Project,,0, 0, 0, 0, 0, 0, 0
 First cable B@Subaru,2020-12-01,2020-12-31,0,Hardware,,0, 0, 0, 0, 0, 0, 0 
