@@ -41,22 +41,14 @@ def plt_line(fig, mls_yr, mls_text, color="gray"):
     )
 
 
-# In[4]:
+# In[10]:
 
 
 # Load in CSV
 df0 = pd.read_csv('drp-plan.csv', skipinitialspace=True,  quotechar='"').applymap(lambda x: x.strip() if type(x)==str else x).iloc[::-1]
 
-
-# In[5]:
-
-
 # Filter out columns not needed for gantt plot
 df = df0[['Task', 'Start', 'Finish', 'Complete', 'Category']].copy()
-
-
-# In[6]:
-
 
 for cat in set(df['Category']):
     if cat not in catColors:
@@ -83,6 +75,12 @@ plt_line(fig, ssp_end, 'Call for SSP', color='black')
 plt_line(fig, engobs_end , 'Eng Obs End', color='green')
 
 fig.show()
+
+
+# In[ ]:
+
+
+
 
 
 # In[ ]:
