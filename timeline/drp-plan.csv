@@ -9,9 +9,9 @@ FRD: metric for quantifying effect,2020-07-01,2020-07-31,0,PSF, "Provide a quant
 FRD modelling,2019-09-01,2021-01-01,0,PSF, "Model the effect of the FRD on the 2D PSF.", 0, 30, 150, 0, 0, 0, 0
 FRD effect w/cable B,2021-01-01,2021-04-01,0,PSF, "Measure the contribution to the FRD based on the B cable once that is installed.", 0, 10, 20, 0, 0, 0, 0
 FRD effect w/cobra movement,2021-03-01,2021-04-01,0,PSF, "Measure the contribution to the FRD due to individual cobra movements.", 0, 5, 5, 0, 0, 0, 0
-Arc line strength list,2020-08-01,2020-09-01,0,PSF, "Update the line list with line strengths measured from arc exposures.", 2, 0, 0, 0, 0, 0, 0
-Arc line amplitude modelling,2019-06-01,2021-06-01,0,PSF, "Model the arc line amplitude variation.", 0,0,0, 60, 0, 0, 0
-Arc subtraction,2020-09-01,2021-06-30,0,PSF,"Subtract arc data based on knowledge of PSF and arc line amplitude.", 20, 0, 0, 0, 0, 0, 0
+Arc line strength list,2020-08-01,2021-06-01,0,PSF, "Update the line list with line strengths measured from arc exposures.", 10, 0, 0, 0, 0, 0, 0
+Arc line amplitude modelling,2019-06-01,2021-07-01,0,PSF, "Model the arc line amplitude variation.", 0,0,0, 60, 0, 0, 0
+Arc subtraction,2020-09-01,2021-07-01,0,PSF,"Subtract arc data based on knowledge of PSF and arc line amplitude.", 20, 0, 0, 0, 0, 0, 0
 Consistent 2D model for detectormap,2020-08-01,2020-12-01,0,WavelengthCal, "Provide a self-consistent model of the detectormap for both spatial and wavelength directions.", 15, 0, 0, 0, 0, 0, 0
 Improved wavelength soln (2-5 km/s),2020-10-01,2020-12-01,0,WavelengthCal, "Improve the wavelength solution down to 2-5 km/s.", 10, 2, 0, 0, 0, 0, 0
 Improved wavelength soln (1 km/s),2021-04-01,2021-08-01,0,WavelengthCal, "Improve the wavelength solution down to 1 km/s. This is useful for Galactic Archeology science.", 15, 2, 0, 0, 0, 0, 0
