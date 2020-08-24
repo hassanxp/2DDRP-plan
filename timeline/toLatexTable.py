@@ -5,7 +5,7 @@ import pandas as pd
 
 def process_resources(row):
     resources = ""
-    for name in ['Price', 'Caplar', 'Belland', 'Yasuda', 'Yabe', 'Yamashita']:
+    for name in ['Price', 'Caplar', 'Belland', 'Yasuda', 'Yabe', 'Yamashita', 'Hamano', 'PU-2']:
         if row[name] > 0:
             resources += f'{name}:{row[name]}, '
     return resources[:-2]
@@ -15,7 +15,7 @@ def process_resources(row):
 # Last row is usually plotted first, so reverse that.
 df0 = pd.read_csv('drp-plan.csv', skipinitialspace=True,  quotechar='"').applymap(lambda x: x.strip() if type(x)==str else x)
 
-df1 = df0[['Task', 'Start', 'Finish', 'Category', 'Description', 'Price', 'Caplar', 'Belland', 'Yasuda', 'Yabe', 'Yamashita']].copy()
+df1 = df0[['Task', 'Start', 'Finish', 'Category', 'Description', 'Price', 'Caplar', 'Belland', 'Yasuda', 'Yabe', 'Yamashita', 'Hamano', 'PU-2']].copy()
 
 # Remove Project and Hardware tasks
 
