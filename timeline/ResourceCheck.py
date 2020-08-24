@@ -50,7 +50,7 @@ def populate(grid, start_date, end_date, labor_days):
         return (True, delta_grid)
 
 
-# In[4]:
+# In[68]:
 
 
 def check_member(df, team_member):
@@ -64,7 +64,7 @@ def check_member(df, team_member):
         start_date = datetime.strptime(row['Start'], '%Y-%m-%d')
         end_date = datetime.strptime(row['Finish'], '%Y-%m-%d')
         labor_days = row[team_member]
-        print(f'Checking {start_date} to {end_date} and days {labor_days}')
+        #print(f'Checking {start_date} to {end_date} and days {labor_days}')
         result, delta = populate(grid, start_date, end_date, labor_days)
         delta_list.append(delta)
         if not result:
@@ -76,7 +76,7 @@ def check_member(df, team_member):
     return grid, delta_list
 
 
-# In[53]:
+# In[69]:
 
 
 def plot_loading(grid, delta_list):
@@ -86,7 +86,6 @@ def plot_loading(grid, delta_list):
     xrange = matplotlib.dates.date2num([datetime(2020,1,1), datetime(2022,1,1)])
     plt.figure(figsize=(20,10))
     for counter, delta in enumerate(delta_list):
-#        plt.plot_date(dates, delta.tolist(), label=df.ix[counter, 'Task'])
         plt.plot_date(dates, delta.tolist(), label=df['Task'][counter])
     plt.plot_date(dates, grid.tolist(), label='Total')
     plt.legend(loc="upper left")
@@ -95,48 +94,42 @@ def plot_loading(grid, delta_list):
     
 
 
-# In[54]:
+# In[70]:
 
 
 df = pd.read_csv('drp-plan.csv', skipinitialspace=True, quotechar='"' ).applymap(lambda x: x.strip() if type(x)==str else x)
 
 
-# In[55]:
+# In[71]:
 
 
 for member in ['Price', 'Caplar', 'Belland', 'Yasuda', 'Yabe', 'Yamashita', 'Mineo', 'Hamano', 'PU-2']:
     check_member(df, member)
 
 
-# In[56]:
+# In[72]:
 
 
 grid, delta_list = check_member(df, 'Price')
 
 
-# In[57]:
+# In[73]:
 
 
 plot_loading(grid, delta_list)
 
 
-# In[58]:
+# In[74]:
 
 
 grid[grid>1]
 
 
-# In[59]:
+# In[75]:
 
 
 grid, delta_list = check_member(df, 'Caplar')
-plot_loading(delta_list)
-
-
-# In[36]:
-
-
-grid
+plot_loading(grid, delta_list)
 
 
 # In[ ]:
