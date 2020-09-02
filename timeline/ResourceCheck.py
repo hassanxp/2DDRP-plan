@@ -50,7 +50,7 @@ def populate(grid, start_date, end_date, labor_days):
         return (True, delta_grid)
 
 
-# In[68]:
+# In[4]:
 
 
 def check_member(df, team_member):
@@ -76,7 +76,7 @@ def check_member(df, team_member):
     return grid, delta_list
 
 
-# In[69]:
+# In[5]:
 
 
 def plot_loading(grid, delta_list):
@@ -94,26 +94,26 @@ def plot_loading(grid, delta_list):
     
 
 
-# In[70]:
+# In[10]:
 
 
 df = pd.read_csv('drp-plan.csv', skipinitialspace=True, quotechar='"' ).applymap(lambda x: x.strip() if type(x)==str else x)
 
 
-# In[71]:
+# In[11]:
 
 
 for member in ['Price', 'Caplar', 'Belland', 'Yasuda', 'Yabe', 'Yamashita', 'Mineo', 'Hamano', 'PU-2']:
     check_member(df, member)
 
 
-# In[72]:
+# In[20]:
 
 
 grid, delta_list = check_member(df, 'Price')
 
 
-# In[73]:
+# In[21]:
 
 
 plot_loading(grid, delta_list)
