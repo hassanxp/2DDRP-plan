@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
+# In[2]:
 
 
 import numpy as np
@@ -10,16 +10,18 @@ from datetime import timedelta
 import pandas as pd
 import matplotlib
 import matplotlib.pyplot as plt
+from itertools import cycle
 
 
-# In[2]:
+# In[3]:
 
 
 GRID_N_DAYS = 3500
 BASE_DATE = datetime(2019,1,1)
+lines = ["-","--","-.",":"]
 
 
-# In[3]:
+# In[105]:
 
 
 def populate(grid, start_date, end_date, labor_days):
@@ -42,15 +44,11 @@ def populate(grid, start_date, end_date, labor_days):
     
     delta_grid = np.zeros(GRID_N_DAYS)
     delta_grid[start_offset_days: end_offset_days] += avg_time_spent
-    
-    if (grid[grid > 1]).size > 0:
-        print(f'PROBLEM: adding date range {start_date} to {end_date} results in max daily work being exceeded')
-        return (False, delta_grid)
-    else:
-        return (True, delta_grid)
+
+    return delta_grid
 
 
-# In[4]:
+# In[146]:
 
 
 def check_member(df, team_member):
@@ -60,15 +58,21 @@ def check_member(df, team_member):
     grid = np.zeros(GRID_N_DAYS)
     all_ok = True
     delta_list = []
+    last_grid_bad = []
     for index, row in df.iterrows():
         start_date = datetime.strptime(row['Start'], '%Y-%m-%d')
         end_date = datetime.strptime(row['Finish'], '%Y-%m-%d')
         labor_days = row[team_member]
         #print(f'Checking {start_date} to {end_date} and days {labor_days}')
-        result, delta = populate(grid, start_date, end_date, labor_days)
-        delta_list.append(delta)
-        if not result:
+        delta = populate(grid, start_date, end_date, labor_days)
+        # Check if there are grid points that exceed tolerance
+        # And there's a change since the previous loop
+        grid_bad = grid[grid > 0.85]
+        if (grid_bad).size > 0 and not np.array_equal(grid_bad, last_grid_bad):
+            last_grid_bad = grid_bad
+            print(f'PROBLEM: adding date range {start_date} to {end_date} results in max daily work being exceeded')
             all_ok = False
+        delta_list.append(delta)
     if all_ok:
         print(f'OK for member {team_member}')
     else:
@@ -76,7 +80,7 @@ def check_member(df, team_member):
     return grid, delta_list
 
 
-# In[5]:
+# In[147]:
 
 
 def plot_loading(grid, delta_list):
@@ -85,51 +89,73 @@ def plot_loading(grid, delta_list):
 
     xrange = matplotlib.dates.date2num([datetime(2020,1,1), datetime(2022,1,1)])
     plt.figure(figsize=(20,10))
+    plt.xticks(rotation=90)
+    #linecycler = cycle(lines)
     for counter, delta in enumerate(delta_list):
         plt.plot_date(dates, delta.tolist(), label=df['Task'][counter])
     plt.plot_date(dates, grid.tolist(), label='Total')
     plt.legend(loc="upper left")
-    plt.xlim(xrange[0], xrange[1])
+    #plt.xlim(xrange[0], xrange[1])
+    plt.xlim('2020-09-01', '2021-09-01')
+
 
     
 
 
-# In[24]:
+# In[148]:
 
 
 df = pd.read_csv('drp-plan.csv', skipinitialspace=True, quotechar='"' ).applymap(lambda x: x.strip() if type(x)==str else x)
 
 
-# In[25]:
+# In[149]:
 
 
 for member in ['Price', 'Caplar', 'Belland', 'Yasuda', 'Yabe', 'Yamashita', 'Mineo', 'Hamano', 'PU-2']:
     check_member(df, member)
 
 
-# In[26]:
+# In[150]:
 
 
 grid, delta_list = check_member(df, 'Price')
 
 
-# In[27]:
+# In[151]:
 
 
 plot_loading(grid, delta_list)
 
 
-# In[28]:
+# In[152]:
 
 
 grid[grid>1]
 
 
-# In[29]:
+# In[153]:
 
 
 grid, delta_list = check_member(df, 'Caplar')
 plot_loading(grid, delta_list)
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
 
 
 # In[ ]:
