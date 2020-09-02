@@ -94,38 +94,38 @@ def plot_loading(grid, delta_list):
     
 
 
-# In[10]:
+# In[24]:
 
 
 df = pd.read_csv('drp-plan.csv', skipinitialspace=True, quotechar='"' ).applymap(lambda x: x.strip() if type(x)==str else x)
 
 
-# In[11]:
+# In[25]:
 
 
 for member in ['Price', 'Caplar', 'Belland', 'Yasuda', 'Yabe', 'Yamashita', 'Mineo', 'Hamano', 'PU-2']:
     check_member(df, member)
 
 
-# In[20]:
+# In[26]:
 
 
 grid, delta_list = check_member(df, 'Price')
 
 
-# In[21]:
+# In[27]:
 
 
 plot_loading(grid, delta_list)
 
 
-# In[74]:
+# In[28]:
 
 
 grid[grid>1]
 
 
-# In[75]:
+# In[29]:
 
 
 grid, delta_list = check_member(df, 'Caplar')
