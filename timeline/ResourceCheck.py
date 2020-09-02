@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[2]:
+# In[1]:
 
 
 import numpy as np
@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 from itertools import cycle
 
 
-# In[3]:
+# In[2]:
 
 
 GRID_N_DAYS = 3500
@@ -21,7 +21,7 @@ BASE_DATE = datetime(2019,1,1)
 lines = ["-","--","-.",":"]
 
 
-# In[105]:
+# In[12]:
 
 
 def populate(grid, start_date, end_date, labor_days):
@@ -48,7 +48,7 @@ def populate(grid, start_date, end_date, labor_days):
     return delta_grid
 
 
-# In[146]:
+# In[13]:
 
 
 def check_member(df, team_member):
@@ -67,7 +67,7 @@ def check_member(df, team_member):
         delta = populate(grid, start_date, end_date, labor_days)
         # Check if there are grid points that exceed tolerance
         # And there's a change since the previous loop
-        grid_bad = grid[grid > 0.85]
+        grid_bad = grid[grid > 0.9]
         if (grid_bad).size > 0 and not np.array_equal(grid_bad, last_grid_bad):
             last_grid_bad = grid_bad
             print(f'PROBLEM: adding date range {start_date} to {end_date} results in max daily work being exceeded')
@@ -80,7 +80,7 @@ def check_member(df, team_member):
     return grid, delta_list
 
 
-# In[147]:
+# In[14]:
 
 
 def plot_loading(grid, delta_list):
@@ -102,38 +102,38 @@ def plot_loading(grid, delta_list):
     
 
 
-# In[148]:
+# In[15]:
 
 
 df = pd.read_csv('drp-plan.csv', skipinitialspace=True, quotechar='"' ).applymap(lambda x: x.strip() if type(x)==str else x)
 
 
-# In[149]:
+# In[16]:
 
 
 for member in ['Price', 'Caplar', 'Belland', 'Yasuda', 'Yabe', 'Yamashita', 'Mineo', 'Hamano', 'PU-2']:
     check_member(df, member)
 
 
-# In[150]:
+# In[17]:
 
 
 grid, delta_list = check_member(df, 'Price')
 
 
-# In[151]:
+# In[18]:
 
 
 plot_loading(grid, delta_list)
 
 
-# In[152]:
+# In[19]:
 
 
 grid[grid>1]
 
 
-# In[153]:
+# In[20]:
 
 
 grid, delta_list = check_member(df, 'Caplar')

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
+# In[5]:
 
 
 import plotly.figure_factory as ff
@@ -10,7 +10,14 @@ import random
 import plotly.graph_objects as go
 
 
-# In[2]:
+# In[6]:
+
+
+import plotly
+plotly.__version__
+
+
+# In[7]:
 
 
 catColors = dict(Project='rgb(255, 51, 0)', 
@@ -22,7 +29,7 @@ catColors = dict(Project='rgb(255, 51, 0)',
                  Infra='rgb(153, 0, 153)')
 
 
-# In[3]:
+# In[8]:
 
 
 def plt_line(fig, mls_yr, mls_text, color="gray"):
@@ -41,7 +48,7 @@ def plt_line(fig, mls_yr, mls_text, color="gray"):
     )
 
 
-# In[13]:
+# In[20]:
 
 
 # Load in CSV
@@ -65,7 +72,8 @@ fig = ff.create_gantt(df, colors=catColors, index_col='Category',
                       showgrid_x=True, 
                       showgrid_y=False, 
                       title="DRP Plan",
-                      height=750)
+                      height=1500,
+                      width=2000)
 fig.update_layout(plot_bgcolor='rgba(0,0,0, 0.1)')
 
 plt_line(fig, '2021-08-31', 'MSIP End', color='red')
@@ -74,13 +82,7 @@ plt_line(fig, engobs_start, 'Eng Obs Start', color='green')
 plt_line(fig, ssp_end, 'Call for SSP', color='black')
 plt_line(fig, engobs_end , 'Eng Obs End', color='green')
 
-fig.show()
-
-
-# In[ ]:
-
-
-
+fig.show(renderer='browser')
 
 
 # In[ ]:

@@ -18,7 +18,7 @@ Resources: Caplar : 20
 
 Ensure that illumination estimate of the pupil should be constant across different spots for single fiber.
 
-Period: 2020-09-01 - 2020-11-01
+Period: 2020-09-01 - 2021-02-01
 
 Resources: Price : 2, Caplar : 24
 
@@ -26,7 +26,7 @@ Resources: Price : 2, Caplar : 24
 
 Interpolate PSF model in zernike space as opposed to detector space.
 
-Period: 2020-11-01 - 2021-03-31
+Period: 2020-10-01 - 2021-05-01
 
 Resources: Price : 10, Caplar : 40
 
@@ -44,7 +44,7 @@ Model the PSF for the NIR detector.
 
 Period: 2020-10-01 - 2021-01-30
 
-Resources: Price : 5, Caplar : 20
+Resources: Price : 5, Caplar : 5
 
 \subsection{PSF QA}
 
@@ -52,7 +52,7 @@ Validate the quality of the PSF
 
 Period: 2020-10-01 - 2021-01-30
 
-Resources: Caplar : 5, Belland : 5
+Resources: Caplar : 10, Belland : 10
 
 \subsection{FRD: metric for quantifying effect}
 
@@ -68,7 +68,7 @@ Model the effect of the FRD on the 2D PSF.
 
 Period: 2019-09-01 - 2021-01-01
 
-Resources: Caplar : 30, Belland : 150
+Resources: Caplar : 30, Belland : 90
 
 \subsection{FRD effect w/cable B}
 
@@ -82,7 +82,7 @@ Resources: Caplar : 10, Belland : 20
 
 Measure the contribution to the FRD due to individual cobra movements.
 
-Period: 2021-03-01 - 2021-04-01
+Period: 2021-03-01 - 2021-06-01
 
 Resources: Caplar : 5, Belland : 5
 
@@ -90,39 +90,55 @@ Resources: Caplar : 5, Belland : 5
 
 Define the API for FRD as a function of cobra, etc
 
-Period: 2020-10-01 - 2020-11-01
+Period: 2020-10-01 - 2021-01-01
 
 Resources: Price : 2, Caplar : 5, Belland : 5
+
+\subsection{FRD updates}
+
+Updates to the FRD calibration following real PFI data acquisition
+
+Period: 2021-06-01 - 2022-02-01
+
+Resources: Price : 5, Caplar : 10
 
 \subsection{Arc line strength list}
 
 Update the line list with line strengths measured from arc exposures.
 
-Period: 2020-08-01 - 2021-06-01
+Period: 2020-09-01 - 2021-08-01
 
-Resources: Price : 10
+Resources: Price : 5
 
 \subsection{Arc line amplitude modelling}
 
-Model the arc line amplitude variation.
+Initial work by Yasuda-san to model the arc line amplitude variation.
 
-Period: 2019-06-01 - 2021-06-01
+Period: 2019-06-01 - 2020-06-01
 
-Resources: PU-2 : 100
+Resources: Yasuda : 40
+
+\subsection{Arc line amplitude modelling 2}
+
+Take over the modelling of the arc line amplitude variation.
+
+Period: 2020-10-01 - 2021-09-01
+
+Resources: Price : 40, Caplar : 40, Yamashita : 50, Hamano : 50
 
 \subsection{Arc subtraction}
 
 Subtract arc data based on knowledge of PSF and arc line amplitude.
 
-Period: 2020-09-01 - 2021-06-01
+Period: 2020-10-01 - 2021-09-01
 
-Resources: Price : 30, PU-2 : 78
+Resources: Price : 40
 
 \subsection{Arc subtraction QA}
 
 Software to validate quality of arc subtraction to photon limit
 
-Period: 2020-12-01 - 2021-06-01
+Period: 2020-12-01 - 2021-09-01
 
 Resources: Yasuda : 20
 
@@ -148,7 +164,7 @@ Improve the wavelength solution down better than 1 km/s. This is useful for sky 
 
 Period: 2020-10-01 - 2021-06-01
 
-Resources: Price : 30, Caplar : 2
+Resources: Price : 15, Caplar : 2
 
 \subsection{Wavelength soln QA}
 
@@ -172,7 +188,7 @@ Using data acquired from the PFI, model telluric features and implement a correc
 
 Period: 2021-10-01 - 2022-12-01
 
-Resources: Yamashita : 20
+Resources: Price : 5, Yamashita : 20
 
 \subsection{Stella absorption features}
 
@@ -206,9 +222,9 @@ Period: 2021-07-01 - 2022-12-01
 
 Resources: Yasuda : 30
 
-\subsection{SunSS sky model}
+\subsection{SuNS sky model}
 
-Using data acquired from the SunSS instrument, model the sky background
+Using data acquired from the SuNS instrument, model the sky background
 
 Period: 2021-02-01 - 2022-12-01
 
@@ -218,7 +234,7 @@ Resources: Price : 10, Caplar : 30
 
 Using a sky model, implement a sky subtraction algorithm in the pipeline.
 
-Period: 2021-08-01 - 2024-01-01
+Period: 2021-09-01 - 2024-01-01
 
 Resources: Price : 60, Caplar : 5
 
@@ -228,7 +244,7 @@ QA
 
 Period: 2021-08-01 - 2024-01-01
 
-Resources: Price : 30, Caplar : 5
+Resources: Price : 10, Caplar : 5, Hamano : 10
 
 \subsection{Flux Calibration: SEDs}
 
@@ -262,14 +278,6 @@ Period: 2020-09-01 - 2021-03-01
 
 Resources: Price : 1, Hamano : 30
 
-\subsection{NIR sims}
-
-Simulate NIR in absence of real data
-
-Period: 2020-11-01 - 2021-04-01
-
-Resources: Price : 20
-
 \subsection{NIR processing}
 
 Implement support for processing NIR data in the 2D DRP pipeline.
@@ -290,7 +298,7 @@ Resources: Price : 10, Caplar : 5
 
 Correct exposures for crosstalk effect.
 
-Period: 2021-01-01 - 2021-06-01
+Period: 2021-01-01 - 2021-10-01
 
 Resources: Price : 15, Caplar : 5
 
@@ -322,7 +330,7 @@ Resources: Price : 5
 
 Merge arm data using real data.
 
-Period: 2021-05-01 - 2021-07-01
+Period: 2021-05-01 - 2021-08-01
 
 Resources: Price : 10
 
@@ -338,9 +346,9 @@ Resources: Price : 5, Mineo : 10
 
 Update the pipeline based on the new LSST middleware generation.
 
-Period: 2020-09-01 - 2020-10-01
+Period: 2020-12-01 - 2021-04-01
 
-Resources: Price : 5
+Resources: Price : 10
 
 \subsection{Pipeline bug fixes}
 
@@ -348,7 +356,7 @@ General debugging and bug fixes during pipeline development
 
 Period: 2020-07-01 - 2022-09-01
 
-Resources: Price : 70
+Resources: Price : 45
 
 \subsection{Pipeline bug fixes}
 
