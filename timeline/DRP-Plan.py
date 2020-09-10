@@ -13,13 +13,6 @@ import plotly.graph_objects as go
 # In[6]:
 
 
-import plotly
-plotly.__version__
-
-
-# In[7]:
-
-
 catColors = dict(Project='rgb(255, 51, 0)', 
                  Hardware='rgb(230, 230, 0)', 
                  Sky='rgb(51, 153, 255)', 
@@ -29,7 +22,7 @@ catColors = dict(Project='rgb(255, 51, 0)',
                  Infra='rgb(153, 0, 153)')
 
 
-# In[8]:
+# In[7]:
 
 
 def plt_line(fig, mls_yr, mls_text, color="gray"):
@@ -48,47 +41,60 @@ def plt_line(fig, mls_yr, mls_text, color="gray"):
     )
 
 
-# In[20]:
+# In[12]:
 
 
-# Load in CSV
-df0 = pd.read_csv('drp-plan.csv', skipinitialspace=True,  quotechar='"').applymap(lambda x: x.strip() if type(x)==str else x).iloc[::-1]
+def plot_plan(plan_file):
+    # Load in CSV
+    df0 = pd.read_csv(plan_file, skipinitialspace=True,  quotechar='"').applymap(lambda x: x.strip() if type(x)==str else x).iloc[::-1]
 
-# Filter out columns not needed for gantt plot
-df = df0[['Task', 'Start', 'Finish', 'Complete', 'Category']].copy()
+    # Filter out columns not needed for gantt plot
+    df = df0[['Task', 'Start', 'Finish', 'Complete', 'Category']].copy()
 
-for cat in set(df['Category']):
-    if cat not in catColors:
-        print(f'category {cat} is not in color mapping') 
+    for cat in set(df['Category']):
+        if cat not in catColors:
+            print(f'category {cat} is not in color mapping') 
 
-arms_full = df[df['Task'] == 'SM3(B+R+N)@LAM']['Start'].values[0]
-engobs_start = df[df['Task'] == 'Engineering observations']['Start'].values[0]
-engobs_end = df[df['Task'] ==  'Engineering observations']['Finish'].values[0]
-ssp_end = df[df['Task'] == 'Call for SSP']['Start'].values[0]
+    arms_full = df[df['Task'] == 'SM3(B+R+N)@LAM']['Start'].values[0]
+    engobs_start = df[df['Task'] == 'Engineering observations']['Start'].values[0]
+    engobs_end = df[df['Task'] ==  'Engineering observations']['Finish'].values[0]
+    ssp_end = df[df['Task'] == 'Call for SSP']['Start'].values[0]
 
-fig = ff.create_gantt(df, colors=catColors, index_col='Category',
-                      show_colorbar=False, 
-                      bar_width=0.1, 
-                      showgrid_x=True, 
-                      showgrid_y=False, 
-                      title="DRP Plan",
-                      height=1500,
-                      width=2000)
-fig.update_layout(plot_bgcolor='rgba(0,0,0, 0.1)')
+    fig = ff.create_gantt(df, colors=catColors, index_col='Category',
+                          show_colorbar=False, 
+                          bar_width=0.1, 
+                          showgrid_x=True, 
+                          showgrid_y=False, 
+                          title=plan_file,
+                          height=1500,
+                          width=2000)
+    fig.update_layout(plot_bgcolor='rgba(0,0,0, 0.1)')
 
-plt_line(fig, '2021-08-31', 'MSIP End', color='red')
-plt_line(fig, arms_full, 'R+B+N', color='gray')
-plt_line(fig, engobs_start, 'Eng Obs Start', color='green')
-plt_line(fig, ssp_end, 'Call for SSP', color='black')
-plt_line(fig, engobs_end , 'Eng Obs End', color='green')
+    plt_line(fig, '2021-08-31', 'MSIP End', color='red')
+    plt_line(fig, arms_full, 'R+B+N', color='gray')
+    plt_line(fig, engobs_start, 'Eng Obs Start', color='green')
+    plt_line(fig, ssp_end, 'Call for SSP', color='black')
+    plt_line(fig, engobs_end , 'Eng Obs End', color='green')
 
-fig.show(renderer='browser')
-
-
-# In[ ]:
+    fig.show(renderer='browser')
 
 
+# In[16]:
 
+
+plot_plan('drp-plan.csv')
+
+
+# In[17]:
+
+
+plot_plan('drp-plan-worst-case.csv')
+
+
+# In[18]:
+
+
+plot_plan('drp-plan-worst-case2.csv')
 
 
 # In[ ]:

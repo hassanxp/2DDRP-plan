@@ -21,7 +21,7 @@ BASE_DATE = datetime(2019,1,1)
 lines = ["-","--","-.",":"]
 
 
-# In[12]:
+# In[3]:
 
 
 def populate(grid, start_date, end_date, labor_days):
@@ -48,10 +48,10 @@ def populate(grid, start_date, end_date, labor_days):
     return delta_grid
 
 
-# In[13]:
+# In[21]:
 
 
-def check_member(df, team_member):
+def check_member(df, team_member, member_load = 0.85):
     print(f'Checking member {team_member}..')
     if df[team_member].isnull().values.any():
         print(f'Found a nan value for row {df[df[team_member].isnull()]}')
@@ -67,7 +67,7 @@ def check_member(df, team_member):
         delta = populate(grid, start_date, end_date, labor_days)
         # Check if there are grid points that exceed tolerance
         # And there's a change since the previous loop
-        grid_bad = grid[grid > 0.9]
+        grid_bad = grid[grid > member_load]
         if (grid_bad).size > 0 and not np.array_equal(grid_bad, last_grid_bad):
             last_grid_bad = grid_bad
             print(f'PROBLEM: adding date range {start_date} to {end_date} results in max daily work being exceeded')
@@ -80,7 +80,7 @@ def check_member(df, team_member):
     return grid, delta_list
 
 
-# In[14]:
+# In[22]:
 
 
 def plot_loading(grid, delta_list):
@@ -102,41 +102,41 @@ def plot_loading(grid, delta_list):
     
 
 
-# In[15]:
+# In[35]:
 
 
-df = pd.read_csv('drp-plan.csv', skipinitialspace=True, quotechar='"' ).applymap(lambda x: x.strip() if type(x)==str else x)
+df = pd.read_csv('drp-plan-worst-case2.csv', skipinitialspace=True, quotechar='"' ).applymap(lambda x: x.strip() if type(x)==str else x)
 
 
-# In[16]:
+# In[36]:
 
 
-for member in ['Price', 'Caplar', 'Belland', 'Yasuda', 'Yabe', 'Yamashita', 'Mineo', 'Hamano', 'PU-2']:
+for member, load in [('Price', 0.9), ('Caplar', 0.6), ('Belland', 0.5), ('Yasuda', 0.5), ('Yabe', 0.5), ('Yamashita', 0.5), ('Mineo', 0.5), ('Hamano', 0.5), ('PU-2', 0.9)]:
     check_member(df, member)
 
 
-# In[17]:
+# In[37]:
 
 
-grid, delta_list = check_member(df, 'Price')
+grid, delta_list = check_member(df, 'Price', 0.9)
 
 
-# In[18]:
+# In[38]:
 
 
 plot_loading(grid, delta_list)
 
 
-# In[19]:
+# In[39]:
 
 
 grid[grid>1]
 
 
-# In[20]:
+# In[40]:
 
 
-grid, delta_list = check_member(df, 'Caplar')
+grid, delta_list = check_member(df, 'Caplar', 0.6)
 plot_loading(grid, delta_list)
 
 
