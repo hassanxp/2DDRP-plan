@@ -105,7 +105,7 @@ def plot_loading(grid, delta_list):
 # In[35]:
 
 
-df = pd.read_csv('drp-plan-worst-case2.csv', skipinitialspace=True, quotechar='"' ).applymap(lambda x: x.strip() if type(x)==str else x)
+df = pd.read_csv('drp-plan-worst-case.csv', skipinitialspace=True, quotechar='"' ).applymap(lambda x: x.strip() if type(x)==str else x)
 
 
 # In[36]:

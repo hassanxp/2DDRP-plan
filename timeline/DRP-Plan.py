@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[5]:
+# In[1]:
 
 
 import plotly.figure_factory as ff
@@ -10,7 +10,7 @@ import random
 import plotly.graph_objects as go
 
 
-# In[6]:
+# In[2]:
 
 
 catColors = dict(Project='rgb(255, 51, 0)', 
@@ -22,10 +22,10 @@ catColors = dict(Project='rgb(255, 51, 0)',
                  Infra='rgb(153, 0, 153)')
 
 
-# In[7]:
+# In[3]:
 
 
-def plt_line(fig, mls_yr, mls_text, color="gray"):
+def plt_line(df, fig, mls_yr, mls_text, color="gray"):
     
     fig.add_trace(
         go.Scatter(
@@ -41,7 +41,7 @@ def plt_line(fig, mls_yr, mls_text, color="gray"):
     )
 
 
-# In[12]:
+# In[4]:
 
 
 def plot_plan(plan_file):
@@ -70,31 +70,25 @@ def plot_plan(plan_file):
                           width=2000)
     fig.update_layout(plot_bgcolor='rgba(0,0,0, 0.1)')
 
-    plt_line(fig, '2021-08-31', 'MSIP End', color='red')
-    plt_line(fig, arms_full, 'R+B+N', color='gray')
-    plt_line(fig, engobs_start, 'Eng Obs Start', color='green')
-    plt_line(fig, ssp_end, 'Call for SSP', color='black')
-    plt_line(fig, engobs_end , 'Eng Obs End', color='green')
+    plt_line(df, fig, '2021-08-31', 'MSIP End', color='red')
+    plt_line(df, fig, arms_full, 'R+B+N', color='gray')
+    plt_line(df, fig, engobs_start, 'Eng Obs Start', color='green')
+    plt_line(df, fig, ssp_end, 'Call for SSP', color='black')
+    plt_line(df, fig, engobs_end , 'Eng Obs End', color='green')
 
     fig.show(renderer='browser')
 
 
-# In[16]:
+# In[5]:
 
 
-plot_plan('drp-plan.csv')
+plot_plan('drp-plan-ideal.csv')
 
 
-# In[17]:
+# In[6]:
 
 
 plot_plan('drp-plan-worst-case.csv')
-
-
-# In[18]:
-
-
-plot_plan('drp-plan-worst-case2.csv')
 
 
 # In[ ]:
