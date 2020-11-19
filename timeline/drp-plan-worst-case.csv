@@ -1,5 +1,6 @@
 Task,Start,Finish,Complete,Category,Description,Price,Caplar,Belland,Yasuda,Yabe,Yamashita, Mineo, Hamano, Loomis, PU-2
-PSF model self-consistent across defocuses,2020-06-01,2020-08-30,0,PSF, "Ensure that illumination estimate of the pupil should be constant across different defocuses for single spot.", 5, 20, 0, 0, 0, 0, 0, 0, 0, 0
+Smooth PSF model,2020-11-01,2020-12-30,0,PSF, "Provide a smoothly varying PSF model in order to model line amplitudes", 1, 10, 0, 0, 0, 0, 0, 0, 0, 0
+PSF model self-consistent across defocuses,2020-06-01,2020-12-30,0,PSF, "Ensure that illumination estimate of the pupil should be constant across different defocuses for single spot.", 5, 20, 0, 0, 0, 0, 0, 0, 0, 0
 PSF model (B detector modeling),2020-08-01,2020-12-01,0,PSF, "While the PSF for the R detector has been examined, the PSF modelling for the B detector has not yet been addressed. Address that.", 0, 20, 0, 0, 0, 0, 0, 0, 0, 0
 PSF model self-consistent within same fiber,2020-09-01,2021-02-01,0,PSF, "Ensure that illumination estimate of the pupil should be constant across different spots for single fiber.", 2, 24, 0, 0, 0, 0, 0, 0, 0, 0
 PSF: interpolate in zernike space,2020-10-01,2021-05-01,0,PSF, "Interpolate PSF model in zernike space as opposed to detector space.", 10, 30, 0, 0, 0, 0, 0, 0, 0, 0
@@ -35,15 +36,15 @@ Flux Calibration: interpolation,2020-02-01,2020-09-01,0,Calibration, "Interpolat
 Flux Calibration: spectral typing,2020-11-01,2020-03-01,0, Calibration,"Whiten spectra and recover input spectral shape", 0, 0, 0, 0, 20, 0, 0, 0, 0
 Flux Calibration: f-star selection,2021-01-01,2021-03-01,0,Calibration, "Determine F-star candidates that can be used for flux calibration.", 0, 0, 0, 0, 0, 10, 0, 0, 0, 0
 Bias/Dark/Flat QA,2020-09-01,2021-03-01,0,Calibration, "Validate quality of Bias/Dark/Flat processing", 1, 0, 0, 0, 0, 0, 0, 30, 0, 0
-NIR processing,2020-11-01,2021-12-01,0,Calibration, "Implement support for processing NIR data in the 2D DRP pipeline.", 20, 0, 0, 0, 0, 0, 0, 0, 20, 0
+NIR processing,2021-01-01,2021-12-01,0,Calibration, "Implement support for processing NIR data in the 2D DRP pipeline.", 20, 0, 0, 0, 0, 0, 0, 0, 20, 0
 Quartz color filter calibration,2022-01-01,2022-04-01,0,Calibration, "Correct for absorption effects caused by the quartz color filter.", 10, 5, 0, 0, 0, 0, 0, 0, 0, 0
 CCD Crosstalk,2021-01-01,2021-10-01,0,Calibration, "Correct exposures for crosstalk effect.", 15, 5, 0, 0, 0, 0, 0, 0, 0, 0
 CCD Brighter/Fatter,2021-01-01,2021-06-01,0,Calibration, "Correct exposures for CCD brighter/fatter effect.", 20, 0, 0, 0, 0, 0, 0, 0, 0, 0
 Spectrophotometric effects,2021-07-01,2022-02-01,0,Calibration, "Correct spectra for Differential Chromatic Refraction effect.",10, 0, 0, 10, 0, 0, 0, 0, 0, 0
 Initial arm merging (B+R/M+N),2020-05-01,2020-06-01,0,Infra, "Merge arm data based on all detector passbands.",5, 0, 0, 0, 0, 0, 0, 0, 0, 0
 Arm merging real data (B+R/M+N),2021-05-01,2021-08-01,0,Infra, "Merge arm data using real data.", 10, 0, 0, 0, 0, 0, 0, 0, 0, 0
-YAML pipeline config,2020-02-01,2020-08-30,0,Infra, "Implement a mechanism for processing data based on visits defined in a YAML config file.",5, 0, 0, 0, 0, 0, 10, 0, 0, 0
-LSST gen3,2020-12-01,2021-04-01,0,Infra, "Update the pipeline based on the new LSST middleware generation.", 10, 0, 0, 0, 0, 0, 0, 0, 0, 0
+YAML pipeline config,2020-02-01,2020-12-30,0,Infra, "Implement a mechanism for processing data based on visits defined in a YAML config file.",5, 0, 0, 0, 0, 0, 15, 0, 0, 0
+LSST gen3,2021-03-01,2021-05-01,0,Infra, "Update the pipeline based on the new LSST middleware generation.", 10, 0, 0, 0, 0, 0, 0, 0, 0, 0
 Pipeline bug fixes,2020-07-01,2022-09-01,0,Infra, "General debugging and bug fixes during pipeline development", 45, 0, 0, 0, 0, 0, 0, 0, 0, 0
 Pipeline bug fixes,2022-09-01,2024-09-01,0,Infra, "Pipeline maintenance", 70, 0, 0, 0, 0, 0, 0, 0, 0, 0
 Engineering observations,2021-06-01,2023-01-30,0,Project,,0, 0, 0, 0, 0, 0, 0, 0, 0, 0
@@ -55,9 +56,10 @@ First cable B@Subaru,2020-12-01,2020-12-31,0,Hardware,,0, 0, 0, 0, 0, 0, 0, 0, 0
 SM1(B+R)@Subaru,2019-12-01,2020-06-02,0,Hardware,,0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 NCU1@LAM,2021-03-31,2021-06-01,0,Hardware,,0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 SM2(B+R)@LAM,2020-05-01,2020-11-01,0,Hardware,,0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-SM2(B+R)@Subaru,2020-11-01,2025-01-01,0,Hardware,,0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+SM2(B+R)@Subaru,2021-02-01,2025-01-01,0,Hardware,,0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 SM3(B+R+N)@LAM,2021-04-01,2021-06-01,0,Hardware,,0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 SM3(B+R+N)@Subaru,2021-06-01,2025-01-01,0,Hardware,,0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 SM4(B+R)@LAM,2021-06-01,2021-08-01,0,Hardware,,0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 SM4(B+R)@Subaru,2021-08-01,2025-01-01,0,Hardware,,0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 PFI@Subaru,2021-01-01,2025-01-01,0,Hardware,,0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+SuNSS@Subaru,2021-01-14, 2025-01-01, 0, Hardware,,0, 0, 0, 0, 0, 0, 0, 0, 0, 0
