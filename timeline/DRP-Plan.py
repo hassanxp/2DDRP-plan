@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
+# In[10]:
 
 
 import plotly.figure_factory as ff
@@ -10,7 +10,7 @@ import random
 import plotly.graph_objects as go
 
 
-# In[2]:
+# In[11]:
 
 
 catColors = dict(Project='rgb(255, 51, 0)', 
@@ -22,7 +22,7 @@ catColors = dict(Project='rgb(255, 51, 0)',
                  Infra='rgb(153, 0, 153)')
 
 
-# In[3]:
+# In[12]:
 
 
 def plt_line(df, fig, mls_yr, mls_text, color="gray"):
@@ -41,7 +41,30 @@ def plt_line(df, fig, mls_yr, mls_text, color="gray"):
     )
 
 
-# In[4]:
+# In[35]:
+
+
+def process_resources(row):
+    resources = ""
+    for name in ['Price', 'Caplar', 'Belland', 'Yasuda', 'Yabe', 'Yamashita', 'Mineo', 'Hamano', 'PU-2']:
+        if row[name] > 0:
+            resources += f'{name} : {row[name]}, '
+    return resources[:-2]
+
+
+# In[36]:
+
+
+def addAnnotation(df, fig):
+    print(type(df))
+    c = 0
+    for index, row in df.iterrows():
+        resources = process_resources(row)
+        fig['layout']['annotations'] += tuple([dict(x=row.get("Finish"), y=c, xanchor='right', yanchor='middle', text=f"{row.get('Task')}: ({resources})", showarrow=True, font=dict(color='black'))])
+        c = c + 1
+
+
+# In[42]:
 
 
 def plot_plan(plan_file):
@@ -68,6 +91,9 @@ def plot_plan(plan_file):
                           title=plan_file,
                           height=1500,
                           width=2000)
+    
+    addAnnotation(df0, fig)
+    
     fig.update_layout(plot_bgcolor='rgba(0,0,0, 0.1)')
 
     plt_line(df, fig, '2021-08-31', 'MSIP End', color='red')
@@ -79,16 +105,36 @@ def plot_plan(plan_file):
     fig.show(renderer='browser')
 
 
-# In[5]:
+# In[ ]:
+
+
+
+
+
+# In[43]:
 
 
 plot_plan('drp-plan-ideal.csv')
 
 
-# In[6]:
+# In[44]:
 
 
 plot_plan('drp-plan-worst-case.csv')
+
+
+# In[40]:
+
+
+df0 = pd.read_csv('drp-plan-ideal.csv', skipinitialspace=True,  quotechar='"').applymap(lambda x: x.strip() if type(x)==str else x).iloc[::-1]
+df = df0[['Task', 'Start', 'Finish', 'Complete', 'Category']].copy()
+df
+
+
+# In[41]:
+
+
+df0
 
 
 # In[ ]:

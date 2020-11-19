@@ -22,7 +22,7 @@ Improved wavelength soln (2-5 km/s),2020-07-01,2020-10-01,0,WavelengthCal, "Impr
 Improved wavelength soln (less than 1 km/s),2020-10-01,2021-06-01,0,WavelengthCal, "Improve the wavelength solution down better than 1 km/s. This is useful for sky subtraction and GA.", 15, 2, 0, 0, 0, 0, 0, 0, 0, 0
 Wavelength soln QA,2020-11-01,2021-06-01,0,WavelengthCal, "Validate that the wavelength solution is accurate to better than 1 km/s.", 0, 0, 10, 0, 0, 0, 0, 0, 0, 0
 Initial sky subtraction,2019-09-01,2019-12-31,0,Sky, "Provide an initial implementation for sky subtraction.", 5, 0, 0, 0, 0, 0, 0, 0, 0, 0
-Telluric Correction,2021-10-01,2022-12-01,0,Sky, "Using data acquired from the PFI, model telluric features and implement a correction in the pipeline.", 5, 0, 0, 0, 0, 20, 0, 0, 0, 0
+Telluric Correction,2022-01-01,2022-12-01,0,Sky, "Using data acquired from the PFI, model telluric features and implement a correction in the pipeline.", 5, 0, 0, 0, 0, 20, 0, 0, 0, 0
 Stella absorption features, 2020-01-01,2020-03-01,0,Sky, "Identify stella absorption features that are sensitive to atmospheric parameters of stars", 0, 0, 0, 0, 0, 20, 0, 0, 0, 0
 Sky line list,2020-10-01,2021-02-01,0,Sky, "Create line list model of sky", 0, 0, 0, 15, 0, 0, 0, 0, 0, 0
 Sky line sims,2021-01-01,2021-07-01,0,Sky, "Simulate the Sky lines for sky subtraction", 0, 0, 0, 15, 0, 0, 0, 0, 0, 0
