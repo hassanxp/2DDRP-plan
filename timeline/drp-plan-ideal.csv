@@ -1,4 +1,4 @@
-Task,Start,Finish,Complete,Category,Description,Price,Caplar,Belland,Yasuda,Yabe,Yamashita, Mineo, Hamano, Loomis, PU-2
+Task,Start,Finish,Complete,Category,Description,Price,Caplar,Belland,IPMU-2,Yabe,Yamashita, Mineo, Hamano, Loomis, Siddiqui
 PSF model self-consistent across defocuses,2020-06-01,2020-08-30,0,PSF, "Ensure that illumination estimate of the pupil should be constant across different defocuses for single spot.", 5, 20, 0, 0, 0, 0, 0, 0, 0, 0
 PSF model (B detector modeling),2020-08-01,2020-12-01,0,PSF, "While the PSF for the R detector has been examined, the PSF modelling for the B detector has not yet been addressed. Address that.", 0, 20, 0, 0, 0, 0, 0, 0, 0, 0
 PSF model self-consistent within same fiber,2020-09-01,2021-02-01,0,PSF, "Ensure that illumination estimate of the pupil should be constant across different spots for single fiber.", 2, 24, 0, 0, 0, 0, 0, 0, 0, 0
@@ -51,13 +51,15 @@ Call for SSP,2022-04-01,2022-05-01,0,Project,,0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 End of SSP Proposal Review,2022-10-01,2022-10-02, 0,Project,,0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 Readiness review of inst for science,2022-08-01,2022-09-01,0,Project,,0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 Science Operations,2023-02-01,2025-01-01,0,Project,,0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-First cable B@Subaru,2020-12-01,2020-12-31,0,Hardware,,0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+First cable B@Subaru,2021-02-12,2021-02-31,0,Hardware,,0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 SM1(B+R)@Subaru,2019-12-01,2020-06-02,0,Hardware,,0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-NCU1@LAM,2021-03-31,2021-06-01,0,Hardware,,0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+NCU1@LAM,2021-08-31,2021-09-01,0,Hardware,,0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+SM1(B+R+N)@Subaru,2022-03-01,2020-06-02,0,Hardware,,0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 SM2(B+R)@LAM,2020-05-01,2020-11-01,0,Hardware,,0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-SM2(B+R)@Subaru,2020-11-01,2025-01-01,0,Hardware,,0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-SM3(B+R+N)@LAM,2021-04-01,2021-06-01,0,Hardware,,0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-SM3(B+R+N)@Subaru,2021-06-01,2025-01-01,0,Hardware,,0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-SM4(B+R)@LAM,2021-06-01,2021-08-01,0,Hardware,,0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-SM4(B+R)@Subaru,2021-08-01,2025-01-01,0,Hardware,,0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-PFI@Subaru,2021-01-01,2025-01-01,0,Hardware,,0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+SM2(B+R)@Subaru,2021-08-01,2025-01-01,0,Hardware,,0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+SM3(B+R+N)@LAM,2021-08-01,2025-01-01,0,Hardware,,0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+SM3(B+R+N)@Subaru,2022-01-01,2025-01-01,0,Hardware,,0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+SM4(B+R)@Subaru,2022-05-01,2025-01-01,0,Hardware,,0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+SM4(B+R+N)@Subaru,2022-11-01,2025-01-01,0,Hardware,,0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+PFI@Subaru,2021-07-01,2025-01-01,0,Hardware,,0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+SuNSS@Subaru,2021-02-12, 2025-01-01, 0, Hardware,,0, 0, 0, 0, 0, 0, 0, 0, 0, 0

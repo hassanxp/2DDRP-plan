@@ -45,7 +45,7 @@ def plt_line(df, fig, mls_yr, mls_text, color="gray"):
 
 
 def process_resources(row):
-    name_effort = {name: row[name] for name in ['Price', 'Caplar', 'Belland', 'Yasuda', 'Yabe', 'Yamashita', 'Mineo', 'Hamano', 'PU-2']}
+    name_effort = {name: row[name] for name in ['Price', 'Caplar', 'Belland', 'IPMU-2', 'Yabe', 'Yamashita', 'Mineo', 'Hamano', 'Siddiqui']}
     resource = [name for name, v in sorted(name_effort.items(), key=lambda item: item[1], reverse=True) if v > 0]
     out = ""
     for r in resource:
@@ -113,7 +113,7 @@ def plot_plan(plan_file):
 plot_plan('drp-plan-ideal.csv')
 
 
-# In[8]:
+# In[9]:
 
 
 plot_plan('drp-plan-worst-case.csv')
