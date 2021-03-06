@@ -41,7 +41,7 @@ def plt_line(df, fig, mls_yr, mls_text, color="gray"):
     )
 
 
-# In[36]:
+# In[4]:
 
 
 def process_resources(row):
@@ -55,7 +55,7 @@ def process_resources(row):
     return out      
 
 
-# In[37]:
+# In[5]:
 
 
 def addAnnotation(df, fig):
@@ -66,7 +66,7 @@ def addAnnotation(df, fig):
         c = c + 1
 
 
-# In[13]:
+# In[6]:
 
 
 def plot_plan(plan_file):
@@ -107,13 +107,13 @@ def plot_plan(plan_file):
     fig.show(renderer='browser')
 
 
-# In[43]:
+# In[7]:
 
 
 plot_plan('drp-plan-ideal.csv')
 
 
-# In[38]:
+# In[8]:
 
 
 plot_plan('drp-plan-worst-case.csv')
