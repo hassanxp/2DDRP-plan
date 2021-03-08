@@ -72,7 +72,7 @@ def addAnnotation(df, fig):
         c = c + 1
 
 
-# In[6]:
+# In[9]:
 
 
 def plot_plan(plan_file):
@@ -105,15 +105,15 @@ def plot_plan(plan_file):
     fig.update_layout(plot_bgcolor='#FFFFFF')
 
     plt_line(df, fig, arms_full, 'b+r+n at LAM', color='gray', ann_rel_y_pos=0)
-    plt_line(df, fig, '2021-08-31', 'NSF MSIP End', color='red', ann_rel_y_pos=2)
-    plt_line(df, fig, engobs_start, 'Eng Obs Start', color='green', ann_rel_y_pos=4)
+    plt_line(df, fig, '2022-08-31', 'NSF MSIP assuming 12 month Ext. End', color='red', ann_rel_y_pos=2)
+    plt_line(df, fig, engobs_start, 'Eng Obs Start', color='green', ann_rel_y_pos=3)
  #   plt_line(df, fig, ssp_end, 'Call for SSP', color='black')
-    plt_line(df, fig, engobs_end , 'Eng Obs End', color='green', ann_rel_y_pos=0)
+    plt_line(df, fig, engobs_end , 'Eng Obs End', color='green', ann_rel_y_pos=3)
     
     fig.show(renderer='browser')
 
 
-# In[7]:
+# In[10]:
 
 
 plot_plan('drp-plan-poster.csv')
@@ -122,8 +122,8 @@ plot_plan('drp-plan-poster.csv')
 # In[8]:
 
 
-df0 = pd.read_csv('drp-plan-poster.csv', skipinitialspace=True,  quotechar='"').applymap(lambda x: x.strip() if type(x)==str else x).iloc[::-1]
-df0
+#df0 = pd.read_csv('drp-plan-poster.csv', skipinitialspace=True,  quotechar='"').applymap(lambda x: x.strip() if type(x)==str else x).iloc[::-1]
+#df0
 
 
 # In[ ]:
