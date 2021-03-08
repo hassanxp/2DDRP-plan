@@ -113,7 +113,7 @@ def plot_plan(plan_file):
 plot_plan('drp-plan-ideal.csv')
 
 
-# In[9]:
+# In[8]:
 
 
 plot_plan('drp-plan-worst-case.csv')
