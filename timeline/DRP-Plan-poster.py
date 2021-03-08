@@ -51,7 +51,7 @@ def plt_line(df, fig, mls_yr, mls_text, color="gray", ann_rel_y_pos=0):
 
 
 def process_resources(row):
-    name_effort = {name: row[name] for name in ['Price', 'Caplar', 'Belland', 'NAOJ/IPMU-1', 'Yabe', 'Yamashita', 'Mineo', 'NAOJ/IPMU-2', 'Siddiqui']}
+    name_effort = {name: row[name] for name in ['Price', 'Caplar', 'Belland', 'Developer-1', 'Yabe', 'Yamashita', 'Mineo', 'Developer-2', 'Siddiqui']}
     resource = [name for name, v in sorted(name_effort.items(), key=lambda item: item[1], reverse=True) if v > 0]
     out = ""
     for r in resource:

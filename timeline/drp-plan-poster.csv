@@ -1,12 +1,12 @@
-Task,Start,Finish,Complete,Category,Description,Price,Caplar,Belland,NAOJ/IPMU-1,Yabe,Yamashita, Mineo, NAOJ/IPMU-2, Loomis, Siddiqui
-Smooth PSF model,2020-11-01,2020-12-30,0,PSF, "Provide a smoothly varying PSF model in order to model line amplitudes", 1, 10, 0, 0, 0, 0, 0, 0, 0, 0
-PSF model self-consistent across defocuses,2020-06-01,2020-12-30,0,PSF, "Ensure that illumination estimate of the pupil should be constant across different defocuses for single spot.", 5, 20, 0, 0, 0, 0, 0, 0, 0, 0
-PSF model (B detector modeling),2020-08-01,2020-12-01,0,PSF, "While the PSF for the R detector has been examined, the PSF modelling for the B detector has not yet been addressed. Address that.", 0, 20, 0, 0, 0, 0, 0, 0, 0, 0
-PSF model self-consistent within same fiber,2020-09-01,2021-02-01,0,PSF, "Ensure that illumination estimate of the pupil should be constant across different spots for single fiber.", 2, 24, 0, 0, 0, 0, 0, 0, 0, 0
+Task,Start,Finish,Complete,Category,Description,Price,Caplar,Belland,Developer-1,Yabe,Yamashita, Mineo, Developer-2, Loomis, Siddiqui
+Smooth PSF model,2020-11-01,2021-03-30,0,PSF, "Provide a smoothly varying PSF model in order to model line amplitudes", 1, 10, 0, 0, 0, 0, 0, 0, 0, 0
+PSF model self-consistent across defocuses,2020-06-01,2021-03-30,0,PSF, "Ensure that illumination estimate of the pupil should be constant across different defocuses for single spot.", 5, 20, 0, 0, 0, 0, 0, 0, 0, 0
+PSF model (B detector modeling),2020-08-01,2021-04-01,0,PSF, "While the PSF for the R detector has been examined, the PSF modelling for the B detector has not yet been addressed. Address that.", 0, 20, 0, 0, 0, 0, 0, 0, 0, 0
+PSF model self-consistent within same fiber,2020-09-01,2021-04-01,0,PSF, "Ensure that illumination estimate of the pupil should be constant across different spots for single fiber.", 2, 24, 0, 0, 0, 0, 0, 0, 0, 0
 PSF: interpolate in zernike space,2020-10-01,2021-05-01,0,PSF, "Interpolate PSF model in zernike space as opposed to detector space.", 10, 30, 0, 0, 0, 0, 0, 0, 0, 0
 PSF modelling (600 fibers),2021-04-01,2021-06-01,0,PSF, "Check that the PSF model is applicable for a full density exposure.", 5, 20, 0, 0, 0, 0, 0, 0, 0, 0
-PSF modelling (N),2020-10-01,2021-01-30,0,PSF, "Model the PSF for the NIR detector.", 5, 5, 0, 0, 0, 0, 0, 0, 0, 0
-PSF QA,2020-10-01,2021-01-30,0,PSF, "Validate the quality of the PSF", 0, 10, 10, 0, 0, 0, 0, 0, 0, 0
+PSF modelling (N),2020-10-01,2021-05-30,0,PSF, "Model the PSF for the NIR detector.", 5, 5, 0, 0, 0, 0, 0, 0, 0, 0
+PSF QA,2020-10-01,2021-04-30,0,PSF, "Validate the quality of the PSF", 0, 10, 10, 0, 0, 0, 0, 0, 0, 0
 FRD: metric for quantifying effect,2020-07-01,2020-07-31,0,PSF, "Provide a quantitive measurement for the effect of the FRD on the PSF.", 0, 2, 5, 0, 0, 0, 0, 0, 0, 0
 FRD modelling,2019-09-01,2021-01-01,0,PSF, "Model the effect of the FRD on the 2D PSF.", 0, 30, 90, 0, 0, 0, 0, 0, 0, 0
 FRD effect w/cable B,2021-01-01,2021-04-01,0,PSF, "Measure the contribution to the FRD based on the B cable once that is installed.", 0, 10, 20, 0, 0, 0, 0, 0, 0, 0
