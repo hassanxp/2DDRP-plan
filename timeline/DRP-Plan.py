@@ -15,11 +15,11 @@ import plotly.graph_objects as go
 
 catColors = dict(Project='rgb(255, 51, 0)', 
                  Hardware='rgb(230, 230, 0)', 
-                 Sky='rgb(51, 153, 255)', 
+                 SkyModelling='rgb(51, 153, 255)', 
                  PSF='rgb(102, 0, 255)', 
-                 WavelengthCal='rgb(153, 102, 255)', 
-                 Calibration='rgb(204, 51, 255)',
-                 Infra='rgb(153, 0, 153)')
+                 WavelengthCalibration='rgb(153, 102, 255)', 
+                 GeneralCalibration='rgb(204, 51, 255)',
+                 Infrastructure='rgb(153, 0, 153)')
 
 
 # In[3]:
@@ -31,7 +31,6 @@ def plt_line(df, fig, mls_yr, mls_text, color="gray"):
         go.Scatter(
             x = [mls_yr, mls_yr],
             y = [-1, len(df.index) + 1],
-#            mode = "lines",
             mode = "lines+text",
             name = mls_text,
             textposition = "bottom center",
@@ -45,7 +44,7 @@ def plt_line(df, fig, mls_yr, mls_text, color="gray"):
 
 
 def process_resources(row):
-    name_effort = {name: row[name] for name in ['Price', 'Caplar', 'Belland', 'IPMU-2', 'Yabe', 'Yamashita', 'Mineo', 'Hamano', 'Siddiqui']}
+    name_effort = {name: row[name] for name in ['Price', 'Caplar', 'Belland', 'Developer-1', 'Yabe', 'Yamashita', 'Mineo', 'Developer-2', 'Siddiqui']}
     resource = [name for name, v in sorted(name_effort.items(), key=lambda item: item[1], reverse=True) if v > 0]
     out = ""
     for r in resource:
@@ -110,13 +109,7 @@ def plot_plan(plan_file):
 # In[7]:
 
 
-plot_plan('drp-plan-ideal.csv')
-
-
-# In[8]:
-
-
-plot_plan('drp-plan-worst-case.csv')
+plot_plan('drp-plan.csv')
 
 
 # In[ ]:

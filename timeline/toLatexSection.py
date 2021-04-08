@@ -2,7 +2,7 @@ import pandas as pd
 
 def process_resources(row):
     resources = ""
-    for name in ['Price', 'Caplar', 'Belland', 'Yasuda', 'Yabe', 'Yamashita', 'Mineo', 'Hamano', 'PU-2']:
+    for name in ["Price","Caplar","Belland","Developer-1","Yabe","Yamashita","Mineo", "Developer-2", "Loomis", "Siddiqui"]:
         if row[name] > 0:
             resources += f'{name} : {row[name]}, '
     return resources[:-2]
@@ -10,7 +10,7 @@ def process_resources(row):
 
 # Load in CSV
 print('loading csv..')
-df0 = pd.read_csv('drp-plan-ideal.csv', skipinitialspace=True, quotechar='"' ).applymap(lambda x: x.strip() if type(x)==str else x)
+df0 = pd.read_csv('drp-plan.csv', skipinitialspace=True, quotechar='"' ).applymap(lambda x: x.strip() if type(x)==str else x)
 
 # Remove Project and Hardware tasks
 
